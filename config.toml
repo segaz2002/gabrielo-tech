@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313"
+baseURL = "https://segaz2002.github.io/gabrielo.tech"
 languageCode = "en"
 title = "Gabriel Kolawole"
 theme = "hugo-nuo"

@@ -3,44 +3,44 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://localhost:1313/links/</loc>
+    <loc>https://segaz2002.github.io/gabrielo.tech/links/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://segaz2002.github.io/gabrielo.tech/about/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/elixir/</loc>
+    <loc>https://segaz2002.github.io/gabrielo.tech/post/elixir/</loc>
     <lastmod>2017-09-11T19:22:14+03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/migrate-from-jekyll/</loc>
+    <loc>https://segaz2002.github.io/gabrielo.tech/post/migrate-from-jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://segaz2002.github.io/gabrielo.tech/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://segaz2002.github.io/gabrielo.tech/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>https://segaz2002.github.io/gabrielo.tech/post/</loc>
     <lastmod>2017-09-11T19:22:14+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://segaz2002.github.io/gabrielo.tech/tags/</loc>
     <priority>0</priority>
   </url>
   
