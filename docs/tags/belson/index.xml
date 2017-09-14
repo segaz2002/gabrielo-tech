@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gabriel Kolawole</title>
-    <link>https://shenoybr.github.io/hugo-goa-demo/</link>
-    <description>Recent content on Gabriel Kolawole</description>
+    <title>Belson on Gabriel Kolawole</title>
+    <link>https://shenoybr.github.io/hugo-goa-demo/tags/belson/</link>
+    <description>Recent content in Belson on Gabriel Kolawole</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 03 Oct 2016 16:59:13 -0400</lastBuildDate>
     
-	<atom:link href="https://shenoybr.github.io/hugo-goa-demo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shenoybr.github.io/hugo-goa-demo/tags/belson/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,25 +19,6 @@
       <guid>https://shenoybr.github.io/hugo-goa-demo/blog/third/</guid>
       <description>Note: This article originally appeared in CodeRag.
 When Hooli acquired Endframe, no one could wait to see what the tech giant would do with the revolutionary, middle-out compression technology. The wait is over: In a savvy pivot, Hooli took the software and created their newest hardware: the Hooli/Endframe Box. While initially conceived as a consumer-facing platform, the Endframe technology has been repurposed to “make the world a better place through secure, high-capacity enterprise data storage servers utilizing middle-out compression technology.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://shenoybr.github.io/hugo-goa-demo/about/</link>
-      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
-      
-      <guid>https://shenoybr.github.io/hugo-goa-demo/about/</guid>
-      <description>Erlich administers the Hacker Hostel, a tech incubator where Richard, Big Head, Dinesh, and Gilfoyle live and work in exchange for 10 percent of their potential businesses. Erlich clings to his glory days, when he sold aviation start-up Aviato, a move that, at least in his mind, qualifies him to be a svengali lording over other tech nerds. He still drives a car emblazoned with multiple Aviato logos and smokes copious amounts of weed.</description>
-    </item>
-    
-    <item>
-      <title>CodeRag</title>
-      <link>https://shenoybr.github.io/hugo-goa-demo/coderag/</link>
-      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
-      
-      <guid>https://shenoybr.github.io/hugo-goa-demo/coderag/</guid>
-      <description>Notes: This article originally appeared in CodeRag.
-Code/Rag has always been more than just another online tech blog. We strive to be part of the tech community—serving an essential, fundamental look at what’s going on in the valley. It’s why our tagline is “Know Your Code.” We think a tech news publication should know the basics. Be the source. Get down to brass tacks. We can do that because we’re part of the very ecosystem we’re reporting on.</description>
     </item>
     
     <item>

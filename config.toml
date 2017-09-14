@@ -1,95 +1,53 @@
-baseURL = "https://segaz2002.github.io/gabrielo.tech"
-languageCode = "en"
-title = "Gabriel Kolawole"
-theme = "hugo-nuo"
-publishDir = "docs"
-enableRobotsTXT = true
-pygmentsuseclasses = true
-PygmentsCodeFences = true
-canonifyurls = true
+# Site settings
+baseurl = "https://segaz2002.github.io/tech-kitchen/"
+#themesDir = "../.."
+languageCode = "en-us"
+title = "Tech Kitchen"
+theme = "hugo-cactus"
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = ""
+# Disable comments by leaving disqusShortname empty
+disqusShortname = "gabrielo.tech"
 
-# Disqus Username
-disqusShortname = "disqus_shortname"
-
-# Google Analytics UA number
-googleAnalytics = "UA-XXXXXXXX-X"
-
-# Copyright of your post
-copyright = "© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce."
-
-# Initial site menu, you can extend menu with content.
-[[menu.main]]
-  name = "Home"
-  weight = 10
-  identifier = "home"
-  url = "/"
-
-[[menu.main]]
-  name = "Works"
-  weight = 20
-  identifier = "works"
-  url = "https://github.com/segaz2002"
-
-# Add your own params here
 [params]
-  author = "Kolawole Gabriel"
-  avatar = "/img/avatar.jpg"
-  seotitle = "Hugo Blog (SEO Version)"
-  subtitle = "~ Simple is good ~"
-  description = "Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again."
-  paginate = 10
+	name = "Gabriel Kolawole"
+	description = "Knowledge sharing space for code experiences"
+	bio = "Software Engineer"
+	# Enter optionally your twitter account
+	twitter = "gabkolawole"
+	enableRSS = true
 
-  # Choose your social networks
-  email = "kolawole.gabriel@outlook.com"
-  github = "segaz2002"
-  twitter = "gabkolawole"
-  linkedin = "https://www.linkedin.com/in/gabriel-kolawole-29398757/"
-  # weibo = "weibo_username"
-  # wechat= "/img/qrcode.jpg" # Replace with your wechat qrcode image
-  # facebook = "facebook_username"
-  # google = "googlplus_id_number"
-  # instagram = "instagram_username"
-  # youtube = "youtube_username"
-  # vimeo = "vimeo_username"
-  # medium = "medium_username"
-  # quora = "quora_username"
-  # pinterest = "pinterest_username"
-  # dribbble = "dribbble_username"
-  # behance = "behance_username"
-  # jsfiddle = "jsfiddle_username"
-  # codepen = "codepen_username"
-  # zhihu = "zhihu_username"
-  # douban = "douban_username"
-  # bilibili = "bilibili_id_number"
+	# Integrate Javascript files or stylesheets by adding the url to the external assets or by
+	# linking local files with their path relative to the static folder, e.g. "css/styles.css"
+	customCSS = []
+	customJS  = []
 
-  # Changyan Comments (China Only)
-  # changyan = false
-  # changyanId = "cyt3toRiB"
-  # changyanConf = "prod_0908b1cb9a581501753cce1ed074dbe3"
+	# The variables below are optionally too and can be used to
+	# translate or customize each string of the theme.
 
-  # Google Webmaster
-  # https://www.google.com/webmasters/
-  # googleSiteVerification = "_moDmnnBNVLBN1rzNxyGUGdPHE20YgbmrtzLIbxaWFc"
+	# Navigation links
+	home = ""
+#	subscribe = ""
+	# Pagination links
+	olderPosts = ""
+	newerPosts = ""
+	readMore = ""
+	copyright = ""
+	# Sharing options and author information in posts
+	aboutAuthor = "Software Engineer"
+	tweet = ""
+	share = ""
+	# 404 page
+	title404 = ""
+	subtitle404 = ""
 
-  # Bing Webmaster
-  # https://www.bing.com/toolbox/webmaster/
-  # msValidate = "22596E34341DD1D17D6022C44647E587"
+	# Choose a font for the social icons in the footer. Either "mono-social" or "font-awesome"
+	iconFont = "font-awesome"
+    # The social icons can be styled differently if you use mono as font - circle, rounded, or empty
+    socialIconStyle = ""
 
-  # Baidu Webmaster (China Only)
-  # https://zhanzhang.baidu.com/
-  # baiduSiteVerification = "MZ23SPxxfa"
-
-  # Sogou Webmaster (China Only)
-  # http://zhanzhang.sogou.com/
-  # sogouSiteVerification = "m2jktMQTZm"
-
-  # 360 Webmaster (China Only)
-  # http://zhanzhang.so.com/
-  # soSiteVerification = "b7ab3b4c2edbc856642004d1b8c27a91"
-
-  # Baidu Tongji (China Only)
-  # https://tongji.baidu.com/
-  # baiduTongji = "e21dc1e8a592188271b615159dc88af7"
-
-  # ICP Number (China Only)
-  # ICP = "苏ICP备16005986号-2"
+# Add additional social link entries underneath
+[social]
+    twitter  = "https://www.twitter.com/gabkolawole"
+    github   = "https://www.github.com/segaz2002"
+    linkedin = "https://www.linkedin.com/in/gabriel-kolawole-29398757/"
