@@ -1,94 +1,58 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Gabriel Kolawole</title>
-    <link>https://shenoybr.github.io/hugo-goa-demo/tags/</link>
-    <description>Recent content in Tags on Gabriel Kolawole</description>
+    <title>Tags on Tech Kitchen</title>
+    <link>https://segaz2002.github.io/tech-kitchen/tags/</link>
+    <description>Recent content in Tags on Tech Kitchen</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <lastBuildDate>Sun, 02 Oct 2016 22:55:05 -0400</lastBuildDate>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Sep 2017 21:56:13 -0400</lastBuildDate>
     
-	<atom:link href="https://shenoybr.github.io/hugo-goa-demo/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://segaz2002.github.io/tech-kitchen/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>About</title>
-      <link>https://shenoybr.github.io/hugo-goa-demo/tags/about/</link>
-      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
+      <title>Anonymous</title>
+      <link>https://segaz2002.github.io/tech-kitchen/tags/anonymous/</link>
+      <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
       
-      <guid>https://shenoybr.github.io/hugo-goa-demo/tags/about/</guid>
+      <guid>https://segaz2002.github.io/tech-kitchen/tags/anonymous/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Aviato</title>
-      <link>https://shenoybr.github.io/hugo-goa-demo/tags/aviato/</link>
-      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
+      <title>Capture</title>
+      <link>https://segaz2002.github.io/tech-kitchen/tags/capture/</link>
+      <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
       
-      <guid>https://shenoybr.github.io/hugo-goa-demo/tags/aviato/</guid>
+      <guid>https://segaz2002.github.io/tech-kitchen/tags/capture/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Bachman</title>
-      <link>https://shenoybr.github.io/hugo-goa-demo/tags/bachman/</link>
-      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
+      <title>Copy</title>
+      <link>https://segaz2002.github.io/tech-kitchen/tags/copy/</link>
+      <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
       
-      <guid>https://shenoybr.github.io/hugo-goa-demo/tags/bachman/</guid>
+      <guid>https://segaz2002.github.io/tech-kitchen/tags/copy/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Belson</title>
-      <link>https://shenoybr.github.io/hugo-goa-demo/tags/belson/</link>
-      <pubDate>Mon, 03 Oct 2016 16:59:13 -0400</pubDate>
+      <title>Elixir</title>
+      <link>https://segaz2002.github.io/tech-kitchen/tags/elixir/</link>
+      <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
       
-      <guid>https://shenoybr.github.io/hugo-goa-demo/tags/belson/</guid>
+      <guid>https://segaz2002.github.io/tech-kitchen/tags/elixir/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Ceo</title>
-      <link>https://shenoybr.github.io/hugo-goa-demo/tags/ceo/</link>
-      <pubDate>Sat, 01 Oct 2016 16:59:13 -0400</pubDate>
+      <title>Operator</title>
+      <link>https://segaz2002.github.io/tech-kitchen/tags/operator/</link>
+      <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
       
-      <guid>https://shenoybr.github.io/hugo-goa-demo/tags/ceo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gavin</title>
-      <link>https://shenoybr.github.io/hugo-goa-demo/tags/gavin/</link>
-      <pubDate>Mon, 03 Oct 2016 16:59:13 -0400</pubDate>
-      
-      <guid>https://shenoybr.github.io/hugo-goa-demo/tags/gavin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hardware</title>
-      <link>https://shenoybr.github.io/hugo-goa-demo/tags/hardware/</link>
-      <pubDate>Sun, 02 Oct 2016 15:59:13 -0400</pubDate>
-      
-      <guid>https://shenoybr.github.io/hugo-goa-demo/tags/hardware/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hooli</title>
-      <link>https://shenoybr.github.io/hugo-goa-demo/tags/hooli/</link>
-      <pubDate>Mon, 03 Oct 2016 16:59:13 -0400</pubDate>
-      
-      <guid>https://shenoybr.github.io/hugo-goa-demo/tags/hooli/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pied Piper</title>
-      <link>https://shenoybr.github.io/hugo-goa-demo/tags/pied-piper/</link>
-      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
-      
-      <guid>https://shenoybr.github.io/hugo-goa-demo/tags/pied-piper/</guid>
+      <guid>https://segaz2002.github.io/tech-kitchen/tags/operator/</guid>
       <description></description>
     </item>
     

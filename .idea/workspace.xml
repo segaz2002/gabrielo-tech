@@ -2,103 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27c14d64-0ec4-4058-8c24-26ea8de279c2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/apple-touch-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/favicon-16x16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/favicon-32x32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/img/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/img/headshot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/img/headshot__.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/mstile-150x150.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/layouts/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/apple-touch-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/favicon-16x16.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/favicon-32x32.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/headshot.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/headshot__.jpg.no" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/mstile-150x150.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/hugo-cactus" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/hugo-goa" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/preferred-vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/tech-blog.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/post/elixir_capture.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/about/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/blog/first/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/blog/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/blog/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/blog/second/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/blog/third/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/browserconfig.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/categories/about/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/categories/about/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/categories/ad/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/categories/ad/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/categories/articles/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/categories/articles/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/categories/propaganda/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/categories/propaganda/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/coderag/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/coderag/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/manifest.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/safari-pinned-tab.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/tags/about/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/tags/about/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/tags/aviato/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/tags/aviato/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/tags/bachman/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/tags/bachman/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/tags/belson/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/tags/belson/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/tags/ceo/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/tags/ceo/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/tags/gavin/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/tags/gavin/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/tags/hardware/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/tags/hardware/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/tags/hooli/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/tags/hooli/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/tags/pied-piper/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/tags/pied-piper/index.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/browserconfig.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/manifest.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/safari-pinned-tab.svg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/about.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/links.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/media/links/chekun.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/media/links/kandisheng.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/media/links/wangbo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/media/links/yuanxuxu.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/media/posts/hugo-nuo-post-preview/01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/media/posts/hugo-nuo-post-preview/videojs.mp4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/media/posts/hugo-nuo-post-preview/videojs.ogv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/media/posts/hugo-nuo-post-preview/videojs.webm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/post/elixir.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/content/post/migrate-from-jekyll.md" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/hugo-nuo" afterPath="$PROJECT_DIR$/themes/hugo-nuo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitmodules" afterPath="$PROJECT_DIR$/.gitmodules" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.toml" afterPath="$PROJECT_DIR$/config.toml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/404.html" afterPath="$PROJECT_DIR$/docs/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/about/index.html" afterPath="$PROJECT_DIR$/docs/about/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/categories/index.xml" afterPath="$PROJECT_DIR$/docs/categories/index.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.xml" afterPath="$PROJECT_DIR$/docs/index.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/robots.txt" afterPath="$PROJECT_DIR$/docs/robots.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/sitemap.xml" afterPath="$PROJECT_DIR$/docs/sitemap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/tags/index.xml" afterPath="$PROJECT_DIR$/docs/tags/index.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -119,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="config.toml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.toml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.toml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+            <state relative-caret-position="81">
+              <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -142,12 +47,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="elixir_capture.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="elixir_capture.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content/post/elixir_capture.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="241">
-                <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <first_editor relative-caret-position="106">
+                <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -186,8 +91,8 @@
         <option value="$PROJECT_DIR$/content/blog/third.md" />
         <option value="$PROJECT_DIR$/content/blog/elixir_capture.md" />
         <option value="$PROJECT_DIR$/content/about/index.md" />
-        <option value="$PROJECT_DIR$/config.toml" />
         <option value="$PROJECT_DIR$/content/post/elixir_capture.md" />
+        <option value="$PROJECT_DIR$/config.toml" />
       </list>
     </option>
   </component>
@@ -224,17 +129,6 @@
             <path>
               <item name="tech-blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="tech-blog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tech-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tech-blog" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tech-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tech-blog" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-              <item name="about" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tech-blog" type="b2602c69:ProjectViewProjectNode" />
@@ -441,22 +335,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.toml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content/post/elixir_capture.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="241">
-            <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <first_editor relative-caret-position="106">
+            <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.toml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>

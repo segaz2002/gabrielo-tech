@@ -3,141 +3,77 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/blog/third/</loc>
-    <lastmod>2016-10-03T16:59:13-04:00</lastmod>
+    <loc>https://segaz2002.github.io/tech-kitchen/about/</loc>
+    <lastmod>2017-09-15T12:35:37+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/about/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+    <loc>https://segaz2002.github.io/tech-kitchen/post/elixir-capture-command/</loc>
+    <lastmod>2017-09-14T21:56:13-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/coderag/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/blog/first/</loc>
-    <lastmod>2016-10-02T15:59:13-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/blog/second/</loc>
-    <lastmod>2016-10-01T16:59:13-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/tags/about/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+    <loc>https://segaz2002.github.io/tech-kitchen/about/</loc>
+    <lastmod>2017-09-15T12:35:37+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/categories/about/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+    <loc>https://segaz2002.github.io/tech-kitchen/tags/anonymous/</loc>
+    <lastmod>2017-09-14T21:56:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/about/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+    <loc>https://segaz2002.github.io/tech-kitchen/tags/capture/</loc>
+    <lastmod>2017-09-14T21:56:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/categories/ad/</loc>
-    <lastmod>2016-10-02T15:59:13-04:00</lastmod>
+    <loc>https://segaz2002.github.io/tech-kitchen/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/categories/articles/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+    <loc>https://segaz2002.github.io/tech-kitchen/tags/copy/</loc>
+    <lastmod>2017-09-14T21:56:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/tags/aviato/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+    <loc>https://segaz2002.github.io/tech-kitchen/tags/elixir/</loc>
+    <lastmod>2017-09-14T21:56:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/tags/bachman/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+    <loc>https://segaz2002.github.io/tech-kitchen/categories/elixir/</loc>
+    <lastmod>2017-09-14T21:56:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/tags/belson/</loc>
-    <lastmod>2016-10-03T16:59:13-04:00</lastmod>
+    <loc>https://segaz2002.github.io/tech-kitchen/tags/operator/</loc>
+    <lastmod>2017-09-14T21:56:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/blog/</loc>
-    <lastmod>2016-10-03T16:59:13-04:00</lastmod>
+    <loc>https://segaz2002.github.io/tech-kitchen/post/</loc>
+    <lastmod>2017-09-14T21:56:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/categories/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+    <loc>https://segaz2002.github.io/tech-kitchen/tags/</loc>
+    <lastmod>2017-09-14T21:56:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/tags/ceo/</loc>
-    <lastmod>2016-10-01T16:59:13-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/coderag/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/</loc>
-    <lastmod>2016-10-03T16:59:13-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/tags/gavin/</loc>
-    <lastmod>2016-10-03T16:59:13-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/tags/hardware/</loc>
-    <lastmod>2016-10-02T15:59:13-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/tags/hooli/</loc>
-    <lastmod>2016-10-03T16:59:13-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/tags/pied-piper/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/categories/propaganda/</loc>
-    <lastmod>2016-10-03T16:59:13-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://shenoybr.github.io/hugo-goa-demo/tags/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+    <loc>https://segaz2002.github.io/tech-kitchen/</loc>
+    <lastmod>2017-09-15T12:35:37+02:00</lastmod>
     <priority>0</priority>
   </url>
   

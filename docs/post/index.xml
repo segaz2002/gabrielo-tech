@@ -1,35 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Gabriel Kolawole</title>
-    <link>https://segaz2002.github.io/gabrielo.tech/post/</link>
-    <description>Recent content in Posts on Gabriel Kolawole</description>
+    <title>Posts on Tech Kitchen</title>
+    <link>https://segaz2002.github.io/tech-kitchen/post/</link>
+    <description>Recent content in Posts on Tech Kitchen</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce.</copyright>
-    <lastBuildDate>Mon, 11 Sep 2017 19:22:14 +0300</lastBuildDate>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Sep 2017 21:56:13 -0400</lastBuildDate>
     
-	<atom:link href="https://segaz2002.github.io/gabrielo.tech/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://segaz2002.github.io/tech-kitchen/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Elixir</title>
-      <link>https://segaz2002.github.io/gabrielo.tech/post/elixir/</link>
-      <pubDate>Mon, 11 Sep 2017 19:22:14 +0300</pubDate>
-      
-      <guid>https://segaz2002.github.io/gabrielo.tech/post/elixir/</guid>
-      <description>Elixir! I am a Node.js developer, now I am transitioning to developing in elixir.</description>
-    </item>
     
     <item>
-      <title>Migrate to Hugo from Jekyll</title>
-      <link>https://segaz2002.github.io/gabrielo.tech/post/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      <title>Elixir capture(&amp;) command</title>
+      <link>https://segaz2002.github.io/tech-kitchen/post/elixir-capture-command/</link>
+      <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
       
-      <guid>https://segaz2002.github.io/gabrielo.tech/post/migrate-from-jekyll/</guid>
-      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+      <guid>https://segaz2002.github.io/tech-kitchen/post/elixir-capture-command/</guid>
+      <description>I intend to explain the usage of the capture (&amp;amp;) command in elixir for newbies like myself, base on my understanding at this point :). It is barely 2 weeks since I started writing elixir as at the writing of this post, coming from node.js.
+The first time I came across the syntax below, I wondered what the f**k is happening here, but I after a while I grab it, thanks to google.</description>
     </item>
     
   </channel>
