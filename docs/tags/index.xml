@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Tech Kitchen</title>
-    <link>https://segaz2002.github.io/tech-kitchen/tags/</link>
+    <link>https://segaz2002.github.io/gabrielo-tech/tags/</link>
     <description>Recent content in Tags on Tech Kitchen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 14 Sep 2017 21:56:13 -0400</lastBuildDate>
     
-	<atom:link href="https://segaz2002.github.io/tech-kitchen/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://segaz2002.github.io/gabrielo-tech/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Anonymous</title>
-      <link>https://segaz2002.github.io/tech-kitchen/tags/anonymous/</link>
+      <link>https://segaz2002.github.io/gabrielo-tech/tags/anonymous/</link>
       <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
       
-      <guid>https://segaz2002.github.io/tech-kitchen/tags/anonymous/</guid>
+      <guid>https://segaz2002.github.io/gabrielo-tech/tags/anonymous/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Capture</title>
-      <link>https://segaz2002.github.io/tech-kitchen/tags/capture/</link>
+      <link>https://segaz2002.github.io/gabrielo-tech/tags/capture/</link>
       <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
       
-      <guid>https://segaz2002.github.io/tech-kitchen/tags/capture/</guid>
+      <guid>https://segaz2002.github.io/gabrielo-tech/tags/capture/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Copy</title>
-      <link>https://segaz2002.github.io/tech-kitchen/tags/copy/</link>
+      <link>https://segaz2002.github.io/gabrielo-tech/tags/copy/</link>
       <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
       
-      <guid>https://segaz2002.github.io/tech-kitchen/tags/copy/</guid>
+      <guid>https://segaz2002.github.io/gabrielo-tech/tags/copy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Elixir</title>
-      <link>https://segaz2002.github.io/tech-kitchen/tags/elixir/</link>
+      <link>https://segaz2002.github.io/gabrielo-tech/tags/elixir/</link>
       <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
       
-      <guid>https://segaz2002.github.io/tech-kitchen/tags/elixir/</guid>
+      <guid>https://segaz2002.github.io/gabrielo-tech/tags/elixir/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Operator</title>
-      <link>https://segaz2002.github.io/tech-kitchen/tags/operator/</link>
+      <link>https://segaz2002.github.io/gabrielo-tech/tags/operator/</link>
       <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
       
-      <guid>https://segaz2002.github.io/tech-kitchen/tags/operator/</guid>
+      <guid>https://segaz2002.github.io/gabrielo-tech/tags/operator/</guid>
       <description></description>
     </item>
     

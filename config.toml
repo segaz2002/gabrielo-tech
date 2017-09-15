@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "https://segaz2002.github.io/tech-kitchen/"
+baseurl = "https://segaz2002.github.io/gabrielo-tech/"
 #themesDir = "../.."
 publishDir = "docs"
 languageCode = "en-us"

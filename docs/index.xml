@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tech Kitchen</title>
-    <link>https://segaz2002.github.io/tech-kitchen/</link>
+    <link>https://segaz2002.github.io/gabrielo-tech/</link>
     <description>Recent content on Tech Kitchen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 15 Sep 2017 12:35:37 +0200</lastBuildDate>
     
-	<atom:link href="https://segaz2002.github.io/tech-kitchen/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://segaz2002.github.io/gabrielo-tech/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://segaz2002.github.io/tech-kitchen/about/</link>
+      <link>https://segaz2002.github.io/gabrielo-tech/about/</link>
       <pubDate>Fri, 15 Sep 2017 12:35:37 +0200</pubDate>
       
-      <guid>https://segaz2002.github.io/tech-kitchen/about/</guid>
+      <guid>https://segaz2002.github.io/gabrielo-tech/about/</guid>
       <description>Hi, I&amp;rsquo;m Gabriel, a software developer from Nigeria.
 I studied Msc. Software Engineering in University of Tartu, Estonia.
 I work fulltime in Tallinn, Estonia.
@@ -25,10 +25,10 @@ I Play FIFA and follow NBA.</description>
     
     <item>
       <title>Elixir capture(&amp;) command</title>
-      <link>https://segaz2002.github.io/tech-kitchen/post/elixir-capture-command/</link>
+      <link>https://segaz2002.github.io/gabrielo-tech/post/elixir-capture-command/</link>
       <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
       
-      <guid>https://segaz2002.github.io/tech-kitchen/post/elixir-capture-command/</guid>
+      <guid>https://segaz2002.github.io/gabrielo-tech/post/elixir-capture-command/</guid>
       <description>I intend to explain the usage of the capture (&amp;amp;) command in elixir for newbies like myself, base on my understanding at this point :). It is barely 2 weeks since I started writing elixir as at the writing of this post, coming from node.js.
 The first time I came across the syntax below, I wondered what the f**k is happening here, but I after a while I grab it, thanks to google.</description>
     </item>
