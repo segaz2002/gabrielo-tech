@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Copy on Tech Kitchen</title>
-    <link>https://segaz2002.github.io/gabrielo-tech/tags/copy/</link>
+    <link>/tags/copy/</link>
     <description>Recent content in Copy on Tech Kitchen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 14 Sep 2017 21:56:13 -0400</lastBuildDate>
     
-	<atom:link href="https://segaz2002.github.io/gabrielo-tech/tags/copy/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/copy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Elixir capture(&amp;) command</title>
-      <link>https://segaz2002.github.io/gabrielo-tech/post/elixir-capture-command/</link>
+      <link>/post/elixir-capture-command/</link>
       <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
       
-      <guid>https://segaz2002.github.io/gabrielo-tech/post/elixir-capture-command/</guid>
+      <guid>/post/elixir-capture-command/</guid>
       <description>I intend to explain the usage of the capture (&amp;amp;) command in elixir for newbies like myself, base on my understanding at this point :). It is barely 2 weeks since I started writing elixir as at the writing of this post, coming from node.js.
 The first time I came across the syntax below, I wondered what the f**k is happening here, but I after a while I grab it, thanks to google.</description>
     </item>
