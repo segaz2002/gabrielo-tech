@@ -64,7 +64,8 @@ Which is our golden plan of breaking off from the recursion.
 
 Let's test our restaurant module:
 
-```coffeescript
+```ruby
+#~/restaurant/test/restaurant_test.exs
 defmodule RestaurantTest do
   use ExUnit.Case
 

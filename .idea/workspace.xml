@@ -2,25 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27c14d64-0ec4-4058-8c24-26ea8de279c2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/post/recursion_in_elixir.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/hugo-nuo" afterPath="$PROJECT_DIR$/themes/hugo-nuo" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.toml" afterPath="$PROJECT_DIR$/config.toml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/404.html" afterPath="$PROJECT_DIR$/docs/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/about/index.html" afterPath="$PROJECT_DIR$/docs/about/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/categories/elixir/index.html" afterPath="$PROJECT_DIR$/docs/categories/elixir/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/categories/elixir/index.xml" afterPath="$PROJECT_DIR$/docs/categories/elixir/index.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/categories/index.xml" afterPath="$PROJECT_DIR$/docs/categories/index.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.xml" afterPath="$PROJECT_DIR$/docs/index.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/post/elixir-capture-command/index.html" afterPath="$PROJECT_DIR$/docs/post/elixir-capture-command/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/post/index.html" afterPath="$PROJECT_DIR$/docs/post/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/post/index.xml" afterPath="$PROJECT_DIR$/docs/post/index.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/sitemap.xml" afterPath="$PROJECT_DIR$/docs/sitemap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/tags/elixir/index.html" afterPath="$PROJECT_DIR$/docs/tags/elixir/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/tags/elixir/index.xml" afterPath="$PROJECT_DIR$/docs/tags/elixir/index.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/tags/index.xml" afterPath="$PROJECT_DIR$/docs/tags/index.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/post/recursion_in_elixir.md" afterPath="$PROJECT_DIR$/content/post/recursion_in_elixir.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="config.toml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.toml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.toml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="620">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -55,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/static/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="62">
-              <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+              <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -74,14 +58,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recursion_in_elixir.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="recursion_in_elixir.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/content/post/recursion_in_elixir.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="992">
-                <caret line="32" column="36" lean-forward="false" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+              <first_editor relative-caret-position="847">
+                <caret line="71" column="14" lean-forward="true" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
                 <folding>
-                  <marker date="1506013819000" expanded="true" signature="1364:1568" ph="..." />
+                  <marker date="1506014425000" expanded="true" signature="1364:1568" ph="..." />
                 </folding>
               </first_editor>
               <second_editor />
@@ -112,9 +96,9 @@
         <option value="$PROJECT_DIR$/content/about/index.md" />
         <option value="$PROJECT_DIR$/content/post/elixir_capture.md" />
         <option value="$PROJECT_DIR$/content/post/recursion.exs" />
-        <option value="$PROJECT_DIR$/content/post/recursion_in_elixir.md" />
         <option value="$PROJECT_DIR$/static/style.css" />
         <option value="$PROJECT_DIR$/config.toml" />
+        <option value="$PROJECT_DIR$/content/post/recursion_in_elixir.md" />
       </list>
     </option>
   </component>
@@ -225,12 +209,12 @@
       <option name="presentableId" value="Default" />
       <updated>1505156983069</updated>
       <workItem from="1505156984204" duration="1864000" />
-      <workItem from="1505982144698" duration="7056000" />
+      <workItem from="1505982144698" duration="7247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8920000" />
+    <option name="totallyTimeSpent" value="9111000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="827" y="23" width="1733" height="1413" extended-state="0" />
@@ -354,6 +338,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/content/post/recursion.exs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.toml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/content/post/elixir_capture.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -365,40 +373,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/post/recursion.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/content/post/recursion_in_elixir.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="992">
-            <caret line="32" column="36" lean-forward="false" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+          <first_editor relative-caret-position="847">
+            <caret line="71" column="14" lean-forward="true" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
             <folding>
-              <marker date="1506013819000" expanded="true" signature="1364:1568" ph="..." />
+              <marker date="1506014425000" expanded="true" signature="1364:1568" ph="..." />
             </folding>
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.toml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
