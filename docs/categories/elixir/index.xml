@@ -6,10 +6,20 @@
     <description>Recent content in Elixir on Tech Kitchen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Sep 2017 21:56:13 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 21 Sep 2017 17:29:13 -0400</lastBuildDate>
     
 	<atom:link href="/categories/elixir/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Recursion in elixir</title>
+      <link>/post/elixir-recursion/</link>
+      <pubDate>Thu, 21 Sep 2017 17:29:13 -0400</pubDate>
+      
+      <guid>/post/elixir-recursion/</guid>
+      <description>The major ingredients of recursion are: - An exercise to perform repeatedly, - A condition to break off the repeated exercise
+Lets say we want to write a function that will return building identifiers where restaurants have not yet closed. The first argument is the current hour as integer, the second argument is the current minute as integer, the third argument is the list of restaurants containing; the name of the canteen, building identifier, closing hour, closing minute.</description>
+    </item>
     
     <item>
       <title>Elixir capture(&amp;) command</title>
