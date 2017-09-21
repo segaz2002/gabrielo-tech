@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Gabriel Kolawole">
+<meta name="description" content="Knowledge sharing space for code experiences">
+<meta name="generator" content="Hugo 0.25.1" />
+<title>Recursion in elixir</title>
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/highlight.css">
+
+<link rel="stylesheet" href="/style.css">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+
+
+<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Tech Kitchen" />
+
+
+<meta property="og:title" content="Recursion in elixir" />
+<meta property="og:description" content="How to perform recursion in elixir " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/elixir-recursion/" />
+
+
+
+<meta property="article:published_time" content="2017-09-21T17:29:13-04:00"/>
+<meta property="article:modified_time" content="2017-09-21T17:29:13-04:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Recursion in elixir">
+<meta itemprop="description" content="How to perform recursion in elixir ">
+
+
+<meta itemprop="dateModified" content="2017-09-21T17:29:13-04:00" />
+<meta itemprop="wordCount" content="401">
+
+
+
+<meta itemprop="keywords" content="elixir,recursion," />
+
+
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="Recursion in elixir"/>
+<meta name="twitter:title" content="Recursion in elixir"/>
+<meta name="twitter:description" content="How to perform recursion in elixir "/>
+<meta name="twitter:site" content="@https://www.twitter.com/gabkolawole"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+ 		<a href='/about/'>About</a>
+  	
+
+	
+		<a class="cta" href="/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Recursion in elixir</h1>
+        <h2 class="subtitle">How to perform recursion in elixir</h2>
+        <h2 class="headline">
+        September 21, 2017
+        <br>
+        
+        
+            
+                <a href="/tags/elixir">elixir</a>
+            
+                <a href="/tags/recursion">recursion</a>
+            
+        
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        
+
+<p>The major ingredients of recursion are:
+- An exercise to perform repeatedly,
+- A condition to break off the repeated exercise</p>
+
+<p>Lets say we want to write a function that will return building identifiers where restaurants have not yet closed.
+The first argument is the current hour as integer, the second argument is the current minute as integer, the third argument
+is the list of restaurants containing; the name of the canteen, building identifier, closing hour, closing minute.</p>
+
+<pre><code class="language-bash">mix new restaurant
+</code></pre>
+
+<pre><code class="language-ruby"># ~/restaurant/lib/restaurant.ex
+
+defmodule Restaurant do
+  defstruct name: nil, id: nil, closing_hour: nil, closing_minute: nil
+
+	def get_opened(hour, minute, restaurants) do
+		check_if_opened(hour, minute, restaurants, [])
+	end
+
+	defp check_if_opened(hour, minute, [restaurant = %Restaurant{closing_hour: c_hour, closing_minute: c_minute} | tail], accumulator)
+    do
+      case (c_hour &gt;= hour) do
+        true when (c_hour != hour) -&gt; check_if_opened(hour, minute, tail, (accumulator ++ [restaurant]))
+        true when (c_hour == hour) -&gt; fn  -&gt;
+            case (minute &lt; c_minute) do
+              true -&gt; check_if_opened(hour, minute, tail, (accumulator ++ [restaurant]))
+              false -&gt; check_if_opened(hour, minute, tail, accumulator)
+            end
+          end.()
+        false -&gt; check_if_opened(hour, minute, tail, accumulator)
+      end
+  end
+	defp check_if_opened(_, _, [], acummulator) do
+		acummulator
+  end
+end
+</code></pre>
+
+<h4 id="explanation">Explanation</h4>
+
+<p><code>get_opened\3</code> is the public function that is called, and this is given the parameters described earlier, the hour, minute and
+the list of restaurants we want to check recursively using the <code>check_if_opened\4</code> function. There are two <code>check_if_opened\4</code> functions,
+thanks to the magic of elixir, this is pattern matching at work. When <code>check_if_opened\4</code> is called it will only match one based on the parameters
+defined on the function.</p>
+
+<p>In our case we have <code>check_if_opend\4</code> which is targeting an empty restaurant list and another one which will match a non empty list.
+Which is our golden plan of breaking off from the recursion.</p>
+
+<p>Let&rsquo;s test our restaurant module:</p>
+
+<pre><code class="language-coffeescript">defmodule RestaurantTest do
+  use ExUnit.Case
+
+  setup_all do
+    restaurants_list = [
+      %Restaurant{name: &quot;Kohvic center&quot;, id: &quot;KHV&quot;, closing_hour: 16, closing_minute: 30},
+      %Restaurant{name: &quot;Kohvic center2&quot;, id: &quot;KHV2&quot;, closing_hour: 14, closing_minute: 00},
+      %Restaurant{name: &quot;Liivi 2 Restaurant&quot;, id: &quot;Liivi-2&quot;, closing_hour: 19, closing_minute: 45},
+    ]
+    {:ok, [restaurants: restaurants_list]}
+  end
+
+  test &quot;check available restaurants for 16:46&quot;, %{restaurants: restaurants} do
+    assert [%Restaurant{id: &quot;Liivi-2&quot;}] = Restaurant.get_opened(16, 46, restaurants) #One restaturant should be opened
+  end
+
+  test &quot;check available restaurants for 18:46&quot;, %{restaurants: restaurants} do
+    assert 0 = length(Restaurant.get_opened(19, 46, restaurants)) #All restaurants should be closed for this time
+  end
+
+  test &quot;check available restaurants for 13:00&quot;, %{restaurants: restaurants} do
+    assert 3 = length(Restaurant.get_opened(13, 00, restaurants)) #All restaurants should be opened by this time
+  end
+</code></pre>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/gabkolawole">
+    <img class="avatar" src="/images/avatar.png">
+    <div>
+        <span class="dark">Gabriel Kolawole</span>
+        <span>Software Engineer</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=%2fpost%2felixir-recursion%2f - Recursion%20in%20elixir by @gabkolawole"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+    </section>
+</footer>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "gabrielo-tech-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/about/">About<aside class="dates">Sep 15 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/post/elixir-capture-command/">Elixir capture(&amp;) command<aside class="dates">Sep 14 2017</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/segaz2002">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/gabriel-kolawole-29398757/">
+        <i class="fa fa-linkedin"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/gabkolawole">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2017 Gabriel Kolawole
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>
