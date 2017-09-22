@@ -62,6 +62,9 @@ defined on the function.
 In our case we have `check_if_opend\4` which is targeting an empty restaurant list and another one which will match a non empty list. 
 Which is our golden plan of breaking off from the recursion.
 
+This comes to mind when looking at this solution "An Enum method could have been used to operate on the restaurant list", yes, this is possible
+but the objective of this tutorials is to demonstrate the explicit filtering of the restaurants in order to showcase recursion in elixir.
+
 Let's test our restaurant module:
 
 ```ruby
