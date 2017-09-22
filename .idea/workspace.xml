@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="27c14d64-0ec4-4058-8c24-26ea8de279c2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/hugo-nuo" afterPath="$PROJECT_DIR$/themes/hugo-nuo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content/post/recursion_in_elixir.md" afterPath="$PROJECT_DIR$/content/post/recursion_in_elixir.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -62,10 +61,10 @@
         <entry file="file://$PROJECT_DIR$/content/post/recursion_in_elixir.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="487">
-                <caret line="74" column="14" lean-forward="true" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
+              <first_editor relative-caret-position="208">
+                <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
                 <folding>
-                  <marker date="1506080835000" expanded="true" signature="1364:1568" ph="..." />
+                  <marker date="1506080955000" expanded="true" signature="1364:1568" ph="..." />
                 </folding>
               </first_editor>
               <second_editor />
@@ -210,12 +209,12 @@
       <workItem from="1505982144698" duration="7247000" />
       <workItem from="1506021453976" duration="178000" />
       <workItem from="1506041063665" duration="450000" />
-      <workItem from="1506080651523" duration="188000" />
+      <workItem from="1506080651523" duration="286000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9927000" />
+    <option name="totallyTimeSpent" value="10025000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -288,7 +287,7 @@
           <first_editor relative-caret-position="2077">
             <caret line="67" column="29" lean-forward="false" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
             <folding>
-              <marker date="1506080835000" expanded="true" signature="1364:1568" ph="..." />
+              <marker date="1506080955000" expanded="true" signature="1364:1568" ph="..." />
             </folding>
           </first_editor>
           <second_editor />
@@ -328,7 +327,7 @@
           <first_editor relative-caret-position="1891">
             <caret line="61" column="84" lean-forward="false" selection-start-line="61" selection-start-column="84" selection-end-line="61" selection-end-column="84" />
             <folding>
-              <marker date="1506080835000" expanded="true" signature="1364:1568" ph="..." />
+              <marker date="1506080955000" expanded="true" signature="1364:1568" ph="..." />
             </folding>
           </first_editor>
           <second_editor />
@@ -360,7 +359,7 @@
           <first_editor relative-caret-position="2201">
             <caret line="71" column="14" lean-forward="true" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
             <folding>
-              <marker date="1506080835000" expanded="true" signature="1364:1568" ph="..." />
+              <marker date="1506080955000" expanded="true" signature="1364:1568" ph="..." />
             </folding>
           </first_editor>
           <second_editor />
@@ -482,10 +481,10 @@
     <entry file="file://$PROJECT_DIR$/content/post/recursion_in_elixir.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="487">
-            <caret line="74" column="14" lean-forward="true" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
+          <first_editor relative-caret-position="208">
+            <caret line="65" column="33" lean-forward="false" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
             <folding>
-              <marker date="1506080835000" expanded="true" signature="1364:1568" ph="..." />
+              <marker date="1506080955000" expanded="true" signature="1364:1568" ph="..." />
             </folding>
           </first_editor>
           <second_editor />
