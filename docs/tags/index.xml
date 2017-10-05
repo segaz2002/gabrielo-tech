@@ -41,9 +41,18 @@
     <item>
       <title>Elixir</title>
       <link>/tags/elixir/</link>
-      <pubDate>Thu, 21 Sep 2017 17:29:13 -0400</pubDate>
+      <pubDate>Thu, 05 Oct 2017 23:44:13 -0400</pubDate>
       
       <guid>/tags/elixir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Libraries</title>
+      <link>/tags/libraries/</link>
+      <pubDate>Thu, 05 Oct 2017 23:44:13 -0400</pubDate>
+      
+      <guid>/tags/libraries/</guid>
       <description></description>
     </item>
     
@@ -62,6 +71,15 @@
       <pubDate>Thu, 21 Sep 2017 17:29:13 -0400</pubDate>
       
       <guid>/tags/recursion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Resource</title>
+      <link>/tags/resource/</link>
+      <pubDate>Thu, 05 Oct 2017 23:44:13 -0400</pubDate>
+      
+      <guid>/tags/resource/</guid>
       <description></description>
     </item>
     
