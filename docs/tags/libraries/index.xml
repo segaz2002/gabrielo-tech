@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Libraries on Tech Kitchen</title>
+    <link>/tags/libraries/</link>
+    <description>Recent content in Libraries on Tech Kitchen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Oct 2017 23:44:13 -0400</lastBuildDate>
+    
+	<atom:link href="/tags/libraries/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>List of amazing elixir resource</title>
+      <link>/post/elixir-capture-command/</link>
+      <pubDate>Thu, 05 Oct 2017 23:44:13 -0400</pubDate>
+      
+      <guid>/post/elixir-capture-command/</guid>
+      <description>Here is an amazing list of handy libraries to use for elixir development.
+I have personally used the rsa_ex library which made the list in one of my projects.
+This can come handy in your next project.
+Share.</description>
+    </item>
+    
+  </channel>
+</rss>
