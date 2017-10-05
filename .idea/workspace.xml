@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27c14d64-0ec4-4058-8c24-26ea8de279c2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content/post/elixir_resource.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/push.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/hugo-nuo" afterPath="$PROJECT_DIR$/themes/hugo-nuo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/404.html" afterPath="$PROJECT_DIR$/docs/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/about/index.html" afterPath="$PROJECT_DIR$/docs/about/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/categories/elixir/index.html" afterPath="$PROJECT_DIR$/docs/categories/elixir/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/categories/elixir/index.xml" afterPath="$PROJECT_DIR$/docs/categories/elixir/index.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/categories/index.xml" afterPath="$PROJECT_DIR$/docs/categories/index.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index.xml" afterPath="$PROJECT_DIR$/docs/index.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/post/elixir-recursion/index.html" afterPath="$PROJECT_DIR$/docs/post/elixir-recursion/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/post/index.html" afterPath="$PROJECT_DIR$/docs/post/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/post/index.xml" afterPath="$PROJECT_DIR$/docs/post/index.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/sitemap.xml" afterPath="$PROJECT_DIR$/docs/sitemap.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/tags/elixir/index.html" afterPath="$PROJECT_DIR$/docs/tags/elixir/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/tags/elixir/index.xml" afterPath="$PROJECT_DIR$/docs/tags/elixir/index.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/tags/index.xml" afterPath="$PROJECT_DIR$/docs/tags/index.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/post/elixir-capture-command/index.html" afterPath="$PROJECT_DIR$/docs/post/elixir-capture-command/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -88,11 +74,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="push.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="push.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/push.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="29">
               <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -139,6 +135,7 @@
         <option value="$PROJECT_DIR$/content/post/recursion_in_elixir.md" />
         <option value="$PROJECT_DIR$/content/post/elixir_resource.md" />
         <option value="$PROJECT_DIR$/push.sh" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -247,12 +244,12 @@
       <workItem from="1506041063665" duration="450000" />
       <workItem from="1506080651523" duration="741000" />
       <workItem from="1506356766496" duration="16000" />
-      <workItem from="1507236176815" duration="872000" />
+      <workItem from="1507236176815" duration="1030000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11368000" />
+    <option name="totallyTimeSpent" value="11526000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -639,6 +636,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
           <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
