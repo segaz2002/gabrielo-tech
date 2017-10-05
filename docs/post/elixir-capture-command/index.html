@@ -7,7 +7,7 @@
 <meta name="author" content="Gabriel Kolawole">
 <meta name="description" content="Knowledge sharing space for code experiences">
 <meta name="generator" content="Hugo 0.25.1" />
-<title>List of amazing elixir resource</title>
+<title>Elixir capture(&amp;) command</title>
 <link rel="shortcut icon" href="/images/favicon.ico">
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/highlight.css">
@@ -23,15 +23,15 @@
 <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Tech Kitchen" />
 
 
-<meta property="og:title" content="List of amazing elixir resource" />
-<meta property="og:description" content="Useful third party libraries for elixir development" />
+<meta property="og:title" content="Elixir capture(&amp;) command" />
+<meta property="og:description" content="Simple explanation for the capture command" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/elixir-capture-command/" />
 
 
 
-<meta property="article:published_time" content="2017-10-05T23:44:13-04:00"/>
-<meta property="article:modified_time" content="2017-10-05T23:44:13-04:00"/>
+<meta property="article:published_time" content="2017-09-14T21:56:13-04:00"/>
+<meta property="article:modified_time" content="2017-09-14T21:56:13-04:00"/>
 
 
 
@@ -45,16 +45,16 @@
 
 
 
-<meta itemprop="name" content="List of amazing elixir resource">
-<meta itemprop="description" content="Useful third party libraries for elixir development">
+<meta itemprop="name" content="Elixir capture(&amp;) command">
+<meta itemprop="description" content="Simple explanation for the capture command">
 
 
-<meta itemprop="dateModified" content="2017-10-05T23:44:13-04:00" />
-<meta itemprop="wordCount" content="38">
+<meta itemprop="dateModified" content="2017-09-14T21:56:13-04:00" />
+<meta itemprop="wordCount" content="161">
 
 
 
-<meta itemprop="keywords" content="elixir,resource,libraries," />
+<meta itemprop="keywords" content="elixir,capture,copy,operator,anonymous," />
 
 
 
@@ -62,9 +62,9 @@
 
 
 
-<meta name="twitter:text:title" content="List of amazing elixir resource"/>
-<meta name="twitter:title" content="List of amazing elixir resource"/>
-<meta name="twitter:description" content="Useful third party libraries for elixir development"/>
+<meta name="twitter:text:title" content="Elixir capture(&amp;) command"/>
+<meta name="twitter:title" content="Elixir capture(&amp;) command"/>
+<meta name="twitter:description" content="Simple explanation for the capture command"/>
 <meta name="twitter:site" content="@https://www.twitter.com/gabkolawole"/>
 
 
@@ -89,32 +89,50 @@
         
 <article class="post">
     <header>
-        <h1>List of amazing elixir resource</h1>
-        <h2 class="subtitle">Useful third party libraries for elixir development</h2>
+        <h1>Elixir capture(&amp;) command</h1>
+        <h2 class="subtitle">Simple explanation for the capture command</h2>
         <h2 class="headline">
-        October 5, 2017
+        September 14, 2017
         <br>
         
         
             
                 <a href="/tags/elixir">elixir</a>
             
-                <a href="/tags/resource">resource</a>
+                <a href="/tags/capture">capture</a>
             
-                <a href="/tags/libraries">libraries</a>
+                <a href="/tags/copy">copy</a>
+            
+                <a href="/tags/operator">operator</a>
+            
+                <a href="/tags/anonymous">anonymous</a>
             
         
         
         </h2>
     </header>
     <section id="post-body">
-        <p><a href="https://github.com/h4cc/awesome-elixir">Here</a> is an amazing list of handy libraries to use for elixir development.</p>
+        
 
-<p>I have personally used the <code>rsa_ex</code> library which made the list in one of my projects.</p>
+<p>I intend to explain the usage of the capture (&amp;) command in elixir for newbies like myself, base on my understanding at this point :).
+It is barely 2 weeks since I started writing elixir as at the writing of this post, coming from node.js.</p>
 
-<p>This can come handy in your next project.</p>
+<p>The first time I came across the syntax below, I wondered what the f**k is happening here, but I after a while I grab it,
+thanks to google. :)</p>
 
-<p>Share.</p>
+<pre><code class="language-ruby">iex(1)&gt; {:ok, %{name: &quot;bla bla&quot;}} |&gt; (&amp; {:ok, %{}} = &amp;1).()
+{:ok, %{name: &quot;bla bla&quot;}}
+</code></pre>
+
+<h4 id="explanation">Explanation</h4>
+
+<p>In the code above the right side is being pattern matched to the left side.</p>
+
+<p>The left side <code>{:ok, %{name: &quot;bla bla&quot;}}</code> is piped (<code>|&gt;</code>) to the match using the capture symbol <code>&amp;</code> and the output is giving to
+right side of my match <code>= &amp;1</code>.</p>
+
+<p>The trick here is that the capture symbol <code>&amp;</code> writes <code>(fn(x) -&gt; x)</code> under the hood and later the entire lambda function is
+executed <code>.()</code>.</p>
 
     </section>
 </article>
@@ -128,7 +146,7 @@
     </div>
     </a>
     <section id="sharing">
-        <a class="twitter" href="https://twitter.com/intent/tweet?text=%2fpost%2felixir-capture-command%2f - List%20of%20amazing%20elixir%20resource by @gabkolawole"><span class="icon-twitter"> tweet</span></a>
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=%2fpost%2felixir-capture-command%2f - Elixir%20capture%28%26%29%20command by @gabkolawole"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -174,55 +192,6 @@
     
         <li>
             <a href="/about/">About<aside class="dates">Sep 15 2017</aside></a>
-        </li>
-    
-</ul>
-
-
-
-        <footer id="footer">
-    
-        <div id="social">
-
-	
-	
-    <a class="symbol" href="https://www.github.com/segaz2002">
-        <i class="fa fa-github"></i>
-    </a>
-    
-    <a class="symbol" href="https://www.linkedin.com/in/gabriel-kolawole-29398757/">
-        <i class="fa fa-linkedin"></i>
-    </a>
-    
-    <a class="symbol" href="https://www.twitter.com/gabkolawole">
-        <i class="fa fa-twitter"></i>
-    </a>
-    
-
-
-</div>
-
-    
-    <p class="small">
-    
-        © Copyright 2017 Gabriel Kolawole
-    
-    </p>
-</footer>
-
-    </section>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/highlight.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
-
-</body>
-</html>
-         <a href="/about/">About<aside class="dates">Sep 15 2017</aside></a>
         </li>
     
 </ul>
