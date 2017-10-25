@@ -6,10 +6,20 @@
     <description>Recent content in Elixir on Tech Kitchen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Oct 2017 23:44:13 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 25 Oct 2017 09:47:13 -0400</lastBuildDate>
     
 	<atom:link href="/tags/elixir/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Testing a phoenix controller</title>
+      <link>/post/elixir-controller-testing/</link>
+      <pubDate>Wed, 25 Oct 2017 09:47:13 -0400</pubDate>
+      
+      <guid>/post/elixir-controller-testing/</guid>
+      <description>The snippet below is a phoenix framework controller test
+defmodule PaymentServiceWeb.Controllers.PaymentTest do use ExUnit.Case, async: false use Plug.Test alias PaymentServiceWeb.Router @tag endpoint: true test &amp;quot;service health check&amp;quot; do conn = conn(:get, &amp;quot;/api&amp;quot;) response = Router.call(conn, @opts) assert %Plug.Conn{resp_body: body} = response end end  Explanation The test above is going to test an api endpoint, and the simple assertion is just to ensure that a %Plug.Conn struct is received as the response.</description>
+    </item>
     
     <item>
       <title>List of amazing elixir resource</title>

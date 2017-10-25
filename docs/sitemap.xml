@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/elixir-controller-testing/</loc>
+    <lastmod>2017-10-25T09:47:13-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/elixir-libraries/</loc>
     <lastmod>2017-10-05T23:44:13-04:00</lastmod>
   </url>
@@ -46,6 +51,12 @@
   </url>
   
   <url>
+    <loc>/tags/controller/</loc>
+    <lastmod>2017-10-25T09:47:13-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/copy/</loc>
     <lastmod>2017-09-14T21:56:13-04:00</lastmod>
     <priority>0</priority>
@@ -53,13 +64,13 @@
   
   <url>
     <loc>/tags/elixir/</loc>
-    <lastmod>2017-10-05T23:44:13-04:00</lastmod>
+    <lastmod>2017-10-25T09:47:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/elixir/</loc>
-    <lastmod>2017-10-05T23:44:13-04:00</lastmod>
+    <lastmod>2017-10-25T09:47:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -76,8 +87,14 @@
   </url>
   
   <url>
+    <loc>/tags/plug/</loc>
+    <lastmod>2017-10-25T09:47:13-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/post/</loc>
-    <lastmod>2017-10-05T23:44:13-04:00</lastmod>
+    <lastmod>2017-10-25T09:47:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -101,7 +118,13 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2017-10-05T23:44:13-04:00</lastmod>
+    <lastmod>2017-10-25T09:47:13-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/testing/</loc>
+    <lastmod>2017-10-25T09:47:13-04:00</lastmod>
     <priority>0</priority>
   </url>
   

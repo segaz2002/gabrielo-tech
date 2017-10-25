@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Controller</title>
+      <link>/tags/controller/</link>
+      <pubDate>Wed, 25 Oct 2017 09:47:13 -0400</pubDate>
+      
+      <guid>/tags/controller/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Copy</title>
       <link>/tags/copy/</link>
       <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
@@ -41,7 +50,7 @@
     <item>
       <title>Elixir</title>
       <link>/tags/elixir/</link>
-      <pubDate>Thu, 05 Oct 2017 23:44:13 -0400</pubDate>
+      <pubDate>Wed, 25 Oct 2017 09:47:13 -0400</pubDate>
       
       <guid>/tags/elixir/</guid>
       <description></description>
@@ -66,6 +75,15 @@
     </item>
     
     <item>
+      <title>Plug</title>
+      <link>/tags/plug/</link>
+      <pubDate>Wed, 25 Oct 2017 09:47:13 -0400</pubDate>
+      
+      <guid>/tags/plug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Recursion</title>
       <link>/tags/recursion/</link>
       <pubDate>Thu, 21 Sep 2017 17:29:13 -0400</pubDate>
@@ -80,6 +98,15 @@
       <pubDate>Thu, 05 Oct 2017 23:44:13 -0400</pubDate>
       
       <guid>/tags/resource/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>/tags/testing/</link>
+      <pubDate>Wed, 25 Oct 2017 09:47:13 -0400</pubDate>
+      
+      <guid>/tags/testing/</guid>
       <description></description>
     </item>
     
