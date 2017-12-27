@@ -6,10 +6,22 @@
     <description>Recent content on Tech Kitchen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Oct 2017 09:47:13 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 27 Dec 2017 21:40:13 -0400</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Elixir Telegram Bot</title>
+      <link>/post/elixir-telegram-bot/</link>
+      <pubDate>Wed, 27 Dec 2017 21:40:13 -0400</pubDate>
+      
+      <guid>/post/elixir-telegram-bot/</guid>
+      <description>The quest was to develop a telegram bot over 24hrs, during an office hackathon event.
+I started out consulting documentation.
+Bot interaction was implemented as a GenServer named ConversationTree
+defmodule TelegramService.ConversationTree do use GenServer def start_link(name, conversation \\ %{message: [], response: [], tickets: []}) do {:ok, _} = GenServer.start_link(__MODULE__, conversation, name: name) name end def lookup(name) do GenServer.whereis(name) end def kill(name) do GenServer.stop(name) end def write_message(name, message = %{}) do GenServer.</description>
+    </item>
     
     <item>
       <title>Testing a phoenix controller</title>
