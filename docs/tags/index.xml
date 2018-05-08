@@ -59,7 +59,7 @@
     <item>
       <title>Elixir</title>
       <link>/tags/elixir/</link>
-      <pubDate>Wed, 27 Dec 2017 21:40:13 -0400</pubDate>
+      <pubDate>Tue, 08 May 2018 21:50:00 -0400</pubDate>
       
       <guid>/tags/elixir/</guid>
       <description></description>
@@ -80,6 +80,15 @@
       <pubDate>Thu, 05 Oct 2017 23:44:13 -0400</pubDate>
       
       <guid>/tags/libraries/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mocking</title>
+      <link>/tags/mocking/</link>
+      <pubDate>Tue, 08 May 2018 21:50:00 -0400</pubDate>
+      
+      <guid>/tags/mocking/</guid>
       <description></description>
     </item>
     
@@ -131,7 +140,7 @@
     <item>
       <title>Testing</title>
       <link>/tags/testing/</link>
-      <pubDate>Wed, 25 Oct 2017 09:47:13 -0400</pubDate>
+      <pubDate>Tue, 08 May 2018 21:50:00 -0400</pubDate>
       
       <guid>/tags/testing/</guid>
       <description></description>

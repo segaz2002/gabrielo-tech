@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Tech Kitchen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Dec 2017 21:40:13 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 08 May 2018 21:50:00 -0400</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Testing with Mocks</title>
+      <link>/post/elixir-tests-with-mocks/</link>
+      <pubDate>Tue, 08 May 2018 21:50:00 -0400</pubDate>
+      
+      <guid>/post/elixir-tests-with-mocks/</guid>
+      <description>The situation was that, I needed to mock multiple external service within my application in order to test my application.
+These external services are being consumed using HTTPPoison the popular elixir http client. The mock is achieved using the Mock library
+# ~/multi_mocks.exs @tag special_service: true test &amp;quot;Test special service that will call other supporting endpoints&amp;quot; do with_mock( HTTPoison, post!: fn endpoint_a, _, _ -&amp;gt; %HTTPoison.Response{body: endpoint_a_response_body} endpoint_b, _, _ -&amp;gt; %HTTPoison.</description>
+    </item>
     
     <item>
       <title>Elixir Telegram Bot</title>
@@ -51,7 +62,8 @@ Share.</description>
       <pubDate>Thu, 21 Sep 2017 17:29:13 -0400</pubDate>
       
       <guid>/post/elixir-recursion/</guid>
-      <description>The major ingredients of recursion are: - An exercise to perform repeatedly, - A condition to break off the repeated exercise
+      <description>I am new to elixir, and I find this interesting at the time of writing, I am coming from NodeJs :)
+The major ingredients of recursion are: - An exercise to perform repeatedly, - A condition to break off the repeated exercise
 Lets say we want to write a function that will return building identifiers where restaurants have not yet closed. The first argument is the current hour as integer, the second argument is the current minute as integer, the third argument is the list of restaurants containing; the name of the canteen, building identifier, closing hour, closing minute.</description>
     </item>
     
