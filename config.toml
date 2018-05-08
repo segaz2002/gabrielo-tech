@@ -29,7 +29,7 @@ disqusShortname = "gabrielo-tech-1"
 
 	# Navigation links
 	home = ""
-	# subscribe = ""
+	subscribe = ""
 	# Pagination links
 	olderPosts = ""
 	newerPosts = ""
