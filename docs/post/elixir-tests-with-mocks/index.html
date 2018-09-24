@@ -50,7 +50,7 @@
 
 
 <meta itemprop="dateModified" content="2018-05-08T21:50:00-04:00" />
-<meta itemprop="wordCount" content="134">
+<meta itemprop="wordCount" content="197">
 
 
 
@@ -115,7 +115,10 @@
 <p>These external services are being consumed using HTTPPoison the popular elixir http client. The mock is achieved using the <a href="https://github.com/jjh42/mock">Mock</a> library</p>
 
 <pre><code class="language-ruby"># ~/multi_mocks.exs
-  @tag special_service: true
+  
+  Import Mock
+  
+  #Mock multiple functions of the same module
   test &quot;Test special service that will call other supporting endpoints&quot; do
     with_mock(
       HTTPoison,
@@ -128,6 +131,23 @@
       assert {:ok, _} = call_to_special_servicer()
     end
   end
+
+  #Mock multiple modules with their functions
+  with_mocks([
+        {ModuleA, [],
+         [
+           function_a: fn _, _ -&gt; mock_desired_return end,
+           function_b: fn _, _ -&gt; mock_desired_return end
+         ]},
+        {ModuleB, [], [function_c: fn _, _ -&gt; mock_desired_return end]},
+        {ModuleC, [],
+         [
+           function_d: fn _ -&gt; mock_desired_return end,
+           function_e: fn _ -&gt; mock_desired_return end
+         ]}
+      ]) do
+        assert left = right
+      end
 </code></pre>
 
 <h4 id="explanation">Explanation</h4>
