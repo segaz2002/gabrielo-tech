@@ -18,7 +18,7 @@ These external services are being consumed using HTTPPoison the popular elixir h
 
 ```ruby
 # ~/multi_mocks.exs
-  @tag special_service: true
+  #Mock multiple functions of the same module
   test "Test special service that will call other supporting endpoints" do
     with_mock(
       HTTPoison,
@@ -31,6 +31,23 @@ These external services are being consumed using HTTPPoison the popular elixir h
       assert {:ok, _} = call_to_special_servicer()
     end
   end
+
+  #Mock multiple modules with their functions
+  with_mocks([
+        {ModuleA, [],
+         [
+           function_a: fn _, _ -> mock_desired_return end,
+           function_b: fn _, _ -> mock_desired_return end
+         ]},
+        {ModuleB, [], [function_c: fn _, _ -> mock_desired_return end]},
+        {ModuleC, [],
+         [
+           function_d: fn _ -> mock_desired_return end,
+           function_e: fn _ -> mock_desired_return end
+         ]}
+      ]) do
+        assert left = right
+      end
 ```
 
 #### Explanation
