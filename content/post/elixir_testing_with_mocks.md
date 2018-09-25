@@ -18,6 +18,9 @@ These external services are being consumed using HTTPPoison the popular elixir h
 
 ```ruby
 # ~/multi_mocks.exs
+  
+  Import Mock
+  
   #Mock multiple functions of the same module
   test "Test special service that will call other supporting endpoints" do
     with_mock(
