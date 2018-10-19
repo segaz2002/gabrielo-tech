@@ -7,7 +7,7 @@
 <meta name="author" content="Gabriel Kolawole">
 <meta name="description" content="Knowledge sharing space for code experiences">
 <meta name="generator" content="Hugo 0.25.1" />
-<title>List of amazing elixir resource</title>
+<title>Composing dynamic queries with ecto</title>
 <link rel="shortcut icon" href="/images/favicon.ico">
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/highlight.css">
@@ -23,19 +23,15 @@
 <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Tech Kitchen" />
 
 
-<meta property="og:title" content="List of amazing elixir resource" />
-<meta property="og:description" content="Useful third party libraries for elixir development" />
+<meta property="og:title" content="Composing dynamic queries with ecto" />
+<meta property="og:description" content="Composing non definite query structures with ecto" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/elixir-libraries/" />
+<meta property="og:url" content="/post/elixir-dynamic-queries-with-ecto/" />
 
 
 
-<meta property="article:published_time" content="2017-10-05T23:44:13-04:00"/>
-<meta property="article:modified_time" content="2017-10-05T23:44:13-04:00"/>
-
-
-
-
+<meta property="article:published_time" content="2018-10-18T20:32:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-10-18T20:32:00&#43;00:00"/>
 
 
 
@@ -45,16 +41,20 @@
 
 
 
-<meta itemprop="name" content="List of amazing elixir resource">
-<meta itemprop="description" content="Useful third party libraries for elixir development">
-
-
-<meta itemprop="dateModified" content="2017-10-05T23:44:13-04:00" />
-<meta itemprop="wordCount" content="38">
 
 
 
-<meta itemprop="keywords" content="elixir,resource,libraries," />
+
+<meta itemprop="name" content="Composing dynamic queries with ecto">
+<meta itemprop="description" content="Composing non definite query structures with ecto">
+
+
+<meta itemprop="dateModified" content="2018-10-18T20:32:00&#43;00:00" />
+<meta itemprop="wordCount" content="200">
+
+
+
+<meta itemprop="keywords" content="elixir,ecto,database,query,graphql," />
 
 
 
@@ -62,9 +62,9 @@
 
 
 
-<meta name="twitter:text:title" content="List of amazing elixir resource"/>
-<meta name="twitter:title" content="List of amazing elixir resource"/>
-<meta name="twitter:description" content="Useful third party libraries for elixir development"/>
+<meta name="twitter:text:title" content="Composing dynamic queries with ecto"/>
+<meta name="twitter:title" content="Composing dynamic queries with ecto"/>
+<meta name="twitter:description" content="Composing non definite query structures with ecto"/>
 <meta name="twitter:site" content="@https://www.twitter.com/gabkolawole"/>
 
 
@@ -89,32 +89,83 @@
         
 <article class="post">
     <header>
-        <h1>List of amazing elixir resource</h1>
-        <h2 class="subtitle">Useful third party libraries for elixir development</h2>
+        <h1>Composing dynamic queries with ecto</h1>
+        <h2 class="subtitle">Composing non definite query structures with ecto</h2>
         <h2 class="headline">
-        October 5, 2017
+        October 18, 2018
         <br>
         
         
             
                 <a href="/tags/elixir">elixir</a>
             
-                <a href="/tags/resource">resource</a>
+                <a href="/tags/ecto">ecto</a>
             
-                <a href="/tags/libraries">libraries</a>
+                <a href="/tags/database">database</a>
+            
+                <a href="/tags/query">query</a>
+            
+                <a href="/tags/graphql">graphql</a>
             
         
         
         </h2>
     </header>
     <section id="post-body">
-        <p><a href="https://github.com/h4cc/awesome-elixir">Here</a> is an amazing list of handy libraries to use for elixir development.</p>
+        
 
-<p>I have personally used the <code>rsa_ex</code> library which made the list in one of my projects.</p>
+<p>I was recently working on a project where I needed to compose a dynamic query for filtering a table using ecto. The filter parameters are coming from a graphql resolver.</p>
 
-<p>This can come handy in your next project.</p>
+<pre><code class="language-ruby"># ~/query.ex
+  #A sample filter input
+  filter_input = %{status: &quot;AVAILABLE&quot;, genre: &quot;Comedy&quot;, last_update_gte: &quot;2018-10-18 00:00:00&quot;, last_update_lte: &quot;2018-10-18 23:59:59&quot; }
+  
+  #The schema I will be querying
+  defmodule Movies do
+    use Ecto.Schema
+    schema &quot;movies&quot; do
+      field(:genre, :string)
+      field(:status, :string)
+      timestamps()
+    end
+  end
 
-<p>Share.</p>
+  #My resolver function
+
+  defmodule MovieFilter do
+    import Ecto.Query
+
+    def compose_filter(filter_params, base_query = %Ecto.Query{}) do
+      filter_params
+      |&gt; Enum.reduce(base_query, fn filter, acc -&gt;
+        q =
+          case filter do
+            {:last_update_gte, value} -&gt; dynamic([w], w.updated_at &gt;= ^value)
+            {:last_update_lte, value} -&gt; dynamic([w], w.updated_at &lt;= ^value)
+            {:status, value} -&gt; dynamic([w], w.status &gt;= ^value)
+            {:genre, value} -&gt; dynamic([w], w.genre &gt;= ^value)
+          end
+
+        where(acc, ^q)
+      end)
+    end
+  end
+  
+  #usage
+  base_query = from(m in Movies)
+
+  MovieFilter.compose_filter(filter_input, base_query)
+  |&gt; Repo.all()
+
+</code></pre>
+
+<h4 id="explanation">Explanation</h4>
+
+<p>With <code>compose_filter\2</code> we are able to compose a dynamic query, which is derived from user input depending on the desired filter fields, the result of the function which is then passed to <code>Repo.all()</code></p>
+
+<p>The <code>dynamic\2</code> in compose_filter function is imported from Ecto.Query as well as <code>where\3</code></p>
+
+<p>More about the dynamic function is <a href="https://hexdocs.pm/ecto/Ecto.Query.html#dynamic/2">Here</a> in the official documentation of Ecto.</p>
 
     </section>
 </article>
@@ -128,7 +179,7 @@
     </div>
     </a>
     <section id="sharing">
-        <a class="twitter" href="https://twitter.com/intent/tweet?text=%2fpost%2felixir-libraries%2f - List%20of%20amazing%20elixir%20resource by @gabkolawole"><span class="icon-twitter"> tweet</span></a>
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=%2fpost%2felixir-dynamic-queries-with-ecto%2f - Composing%20dynamic%20queries%20with%20ecto by @gabkolawole"><span class="icon-twitter"> tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -169,10 +220,6 @@
     
     
         <li>
-            <a href="/post/elixir-dynamic-queries-with-ecto/">Composing dynamic queries with ecto<aside class="dates">Oct 18 2018</aside></a>
-        </li>
-    
-        <li>
             <a href="/post/elixir-tests-with-mocks/">Testing with Mocks<aside class="dates">May 8 2018</aside></a>
         </li>
     
@@ -182,6 +229,10 @@
     
         <li>
             <a href="/post/elixir-controller-testing/">Testing a phoenix controller<aside class="dates">Oct 25 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/post/elixir-libraries/">List of amazing elixir resource<aside class="dates">Oct 5 2017</aside></a>
         </li>
     
         <li>

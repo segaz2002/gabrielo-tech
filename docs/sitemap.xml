@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/elixir-dynamic-queries-with-ecto/</loc>
+    <lastmod>2018-10-18T20:32:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/elixir-tests-with-mocks/</loc>
     <lastmod>2018-05-08T21:50:00-04:00</lastmod>
   </url>
@@ -79,20 +84,38 @@
   </url>
   
   <url>
-    <loc>/tags/elixir/</loc>
-    <lastmod>2018-05-08T21:50:00-04:00</lastmod>
+    <loc>/tags/database/</loc>
+    <lastmod>2018-10-18T20:32:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ecto/</loc>
+    <lastmod>2018-10-18T20:32:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/elixir/</loc>
-    <lastmod>2018-05-08T21:50:00-04:00</lastmod>
+    <lastmod>2018-10-18T20:32:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/elixir/</loc>
+    <lastmod>2018-10-18T20:32:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/genserver/</loc>
     <lastmod>2017-12-27T21:40:13-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/graphql/</loc>
+    <lastmod>2018-10-18T20:32:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -122,7 +145,13 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-05-08T21:50:00-04:00</lastmod>
+    <lastmod>2018-10-18T20:32:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/query/</loc>
+    <lastmod>2018-10-18T20:32:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -146,7 +175,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-05-08T21:50:00-04:00</lastmod>
+    <lastmod>2018-10-18T20:32:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -6,10 +6,20 @@
     <description>Recent content on Tech Kitchen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 May 2018 21:50:00 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 18 Oct 2018 20:32:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Composing dynamic queries with ecto</title>
+      <link>/post/elixir-dynamic-queries-with-ecto/</link>
+      <pubDate>Thu, 18 Oct 2018 20:32:00 +0000</pubDate>
+      
+      <guid>/post/elixir-dynamic-queries-with-ecto/</guid>
+      <description>I was recently working on a project where I needed to compose a dynamic query for filtering a table using ecto. The filter parameters are coming from a graphql resolver.
+# ~/query.ex #A sample filter input filter_input = %{status: &amp;quot;AVAILABLE&amp;quot;, genre: &amp;quot;Comedy&amp;quot;, last_update_gte: &amp;quot;2018-10-18 00:00:00&amp;quot;, last_update_lte: &amp;quot;2018-10-18 23:59:59&amp;quot; } #The schema I will be querying defmodule Movies do use Ecto.Schema schema &amp;quot;movies&amp;quot; do field(:genre, :string) field(:status, :string) timestamps() end end #My resolver function defmodule MovieFilter do import Ecto.</description>
+    </item>
     
     <item>
       <title>Testing with Mocks</title>

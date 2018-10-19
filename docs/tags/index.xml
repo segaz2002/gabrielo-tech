@@ -57,9 +57,27 @@
     </item>
     
     <item>
+      <title>Database</title>
+      <link>/tags/database/</link>
+      <pubDate>Thu, 18 Oct 2018 20:32:00 +0000</pubDate>
+      
+      <guid>/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ecto</title>
+      <link>/tags/ecto/</link>
+      <pubDate>Thu, 18 Oct 2018 20:32:00 +0000</pubDate>
+      
+      <guid>/tags/ecto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Elixir</title>
       <link>/tags/elixir/</link>
-      <pubDate>Tue, 08 May 2018 21:50:00 -0400</pubDate>
+      <pubDate>Thu, 18 Oct 2018 20:32:00 +0000</pubDate>
       
       <guid>/tags/elixir/</guid>
       <description></description>
@@ -71,6 +89,15 @@
       <pubDate>Wed, 27 Dec 2017 21:40:13 -0400</pubDate>
       
       <guid>/tags/genserver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graphql</title>
+      <link>/tags/graphql/</link>
+      <pubDate>Thu, 18 Oct 2018 20:32:00 +0000</pubDate>
+      
+      <guid>/tags/graphql/</guid>
       <description></description>
     </item>
     
@@ -107,6 +134,15 @@
       <pubDate>Wed, 25 Oct 2017 09:47:13 -0400</pubDate>
       
       <guid>/tags/plug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Query</title>
+      <link>/tags/query/</link>
+      <pubDate>Thu, 18 Oct 2018 20:32:00 +0000</pubDate>
+      
+      <guid>/tags/query/</guid>
       <description></description>
     </item>
     
