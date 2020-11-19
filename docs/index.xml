@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tech Kitchen</title>
@@ -6,11 +6,7 @@
     <description>Recent content on Tech Kitchen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Oct 2017 09:47:13 -0400</lastBuildDate>
-    
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 25 Oct 2017 09:47:13 -0400</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Testing a phoenix controller</title>
       <link>/post/elixir-controller-testing/</link>
@@ -18,7 +14,7 @@
       
       <guid>/post/elixir-controller-testing/</guid>
       <description>The snippet below is a phoenix framework controller test
-defmodule PaymentServiceWeb.Controllers.PaymentTest do use ExUnit.Case, async: false use Plug.Test alias PaymentServiceWeb.Router @tag endpoint: true test &amp;quot;service health check&amp;quot; do conn = conn(:get, &amp;quot;/api&amp;quot;) response = Router.call(conn, @opts) assert %Plug.Conn{resp_body: body} = response end end  Explanation The test above is going to test an api endpoint, and the simple assertion is just to ensure that a %Plug.Conn struct is received as the response.</description>
+defmodule PaymentServiceWeb.Controllers.PaymentTest do use ExUnit.Case, async: false use Plug.Test alias PaymentServiceWeb.Router @tag endpoint: true test &amp;#34;service health check&amp;#34; do conn = conn(:get, &amp;#34;/api&amp;#34;) response = Router.call(conn, @opts) assert %Plug.Conn{resp_body: body} = response end end Explanation The test above is going to test an api endpoint, and the simple assertion is just to ensure that a %Plug.Conn struct is received as the response.</description>
     </item>
     
     <item>
@@ -39,8 +35,8 @@ Share.</description>
       <pubDate>Thu, 21 Sep 2017 17:29:13 -0400</pubDate>
       
       <guid>/post/elixir-recursion/</guid>
-      <description>The major ingredients of recursion are: - An exercise to perform repeatedly, - A condition to break off the repeated exercise
-Lets say we want to write a function that will return building identifiers where restaurants have not yet closed. The first argument is the current hour as integer, the second argument is the current minute as integer, the third argument is the list of restaurants containing; the name of the canteen, building identifier, closing hour, closing minute.</description>
+      <description>The major ingredients of recursion are:
+ An exercise to perform repeatedly, A condition to break off the repeated exercise  Lets say we want to write a function that will return building identifiers where restaurants have not yet closed. The first argument is the current hour as integer, the second argument is the current minute as integer, the third argument is the list of restaurants containing; the name of the canteen, building identifier, closing hour, closing minute.</description>
     </item>
     
     <item>
@@ -52,7 +48,8 @@ Lets say we want to write a function that will return building identifiers where
       <description>Hi, I&amp;rsquo;m Gabriel, a software developer from Nigeria.
 I studied Msc. Software Engineering in University of Tartu, Estonia.
 I work fulltime in Tallinn, Estonia.
-I Play FIFA and follow NBA.</description>
+I Play FIFA and follow NBA.
+ </description>
     </item>
     
     <item>

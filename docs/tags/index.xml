@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Tech Kitchen</title>
@@ -6,31 +6,9 @@
     <description>Recent content in Tags on Tech Kitchen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Sep 2017 21:56:13 -0400</lastBuildDate>
-    
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 25 Oct 2017 09:47:13 -0400</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Anonymous</title>
-      <link>/tags/anonymous/</link>
-      <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
-      
-      <guid>/tags/anonymous/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Capture</title>
-      <link>/tags/capture/</link>
-      <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
-      
-      <guid>/tags/capture/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Controller</title>
+      <title>controller</title>
       <link>/tags/controller/</link>
       <pubDate>Wed, 25 Oct 2017 09:47:13 -0400</pubDate>
       
@@ -39,16 +17,7 @@
     </item>
     
     <item>
-      <title>Copy</title>
-      <link>/tags/copy/</link>
-      <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
-      
-      <guid>/tags/copy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Elixir</title>
+      <title>elixir</title>
       <link>/tags/elixir/</link>
       <pubDate>Wed, 25 Oct 2017 09:47:13 -0400</pubDate>
       
@@ -57,25 +26,7 @@
     </item>
     
     <item>
-      <title>Libraries</title>
-      <link>/tags/libraries/</link>
-      <pubDate>Thu, 05 Oct 2017 23:44:13 -0400</pubDate>
-      
-      <guid>/tags/libraries/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Operator</title>
-      <link>/tags/operator/</link>
-      <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
-      
-      <guid>/tags/operator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Plug</title>
+      <title>plug</title>
       <link>/tags/plug/</link>
       <pubDate>Wed, 25 Oct 2017 09:47:13 -0400</pubDate>
       
@@ -84,16 +35,25 @@
     </item>
     
     <item>
-      <title>Recursion</title>
-      <link>/tags/recursion/</link>
-      <pubDate>Thu, 21 Sep 2017 17:29:13 -0400</pubDate>
+      <title>testing</title>
+      <link>/tags/testing/</link>
+      <pubDate>Wed, 25 Oct 2017 09:47:13 -0400</pubDate>
       
-      <guid>/tags/recursion/</guid>
+      <guid>/tags/testing/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Resource</title>
+      <title>libraries</title>
+      <link>/tags/libraries/</link>
+      <pubDate>Thu, 05 Oct 2017 23:44:13 -0400</pubDate>
+      
+      <guid>/tags/libraries/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>resource</title>
       <link>/tags/resource/</link>
       <pubDate>Thu, 05 Oct 2017 23:44:13 -0400</pubDate>
       
@@ -102,11 +62,47 @@
     </item>
     
     <item>
-      <title>Testing</title>
-      <link>/tags/testing/</link>
-      <pubDate>Wed, 25 Oct 2017 09:47:13 -0400</pubDate>
+      <title>recursion</title>
+      <link>/tags/recursion/</link>
+      <pubDate>Thu, 21 Sep 2017 17:29:13 -0400</pubDate>
       
-      <guid>/tags/testing/</guid>
+      <guid>/tags/recursion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>anonymous</title>
+      <link>/tags/anonymous/</link>
+      <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
+      
+      <guid>/tags/anonymous/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>capture</title>
+      <link>/tags/capture/</link>
+      <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
+      
+      <guid>/tags/capture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>copy</title>
+      <link>/tags/copy/</link>
+      <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
+      
+      <guid>/tags/copy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>operator</title>
+      <link>/tags/operator/</link>
+      <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
+      
+      <guid>/tags/operator/</guid>
       <description></description>
     </item>
     

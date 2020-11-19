@@ -1,24 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recursion on Tech Kitchen</title>
+    <title>recursion on Tech Kitchen</title>
     <link>/tags/recursion/</link>
-    <description>Recent content in Recursion on Tech Kitchen</description>
+    <description>Recent content in recursion on Tech Kitchen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Sep 2017 17:29:13 -0400</lastBuildDate>
-    
-	<atom:link href="/tags/recursion/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 21 Sep 2017 17:29:13 -0400</lastBuildDate><atom:link href="/tags/recursion/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Recursion in elixir</title>
       <link>/post/elixir-recursion/</link>
       <pubDate>Thu, 21 Sep 2017 17:29:13 -0400</pubDate>
       
       <guid>/post/elixir-recursion/</guid>
-      <description>The major ingredients of recursion are: - An exercise to perform repeatedly, - A condition to break off the repeated exercise
-Lets say we want to write a function that will return building identifiers where restaurants have not yet closed. The first argument is the current hour as integer, the second argument is the current minute as integer, the third argument is the list of restaurants containing; the name of the canteen, building identifier, closing hour, closing minute.</description>
+      <description>The major ingredients of recursion are:
+ An exercise to perform repeatedly, A condition to break off the repeated exercise  Lets say we want to write a function that will return building identifiers where restaurants have not yet closed. The first argument is the current hour as integer, the second argument is the current minute as integer, the third argument is the list of restaurants containing; the name of the canteen, building identifier, closing hour, closing minute.</description>
     </item>
     
   </channel>
