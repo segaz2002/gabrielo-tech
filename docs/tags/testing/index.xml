@@ -8,6 +8,17 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 25 Oct 2017 09:47:13 -0400</lastBuildDate><atom:link href="/tags/testing/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Testing with Mocks</title>
+      <link>/post/elixir-tests-with-mocks/</link>
+      <pubDate>Tue, 08 May 2018 21:50:00 -0400</pubDate>
+      
+      <guid>/post/elixir-tests-with-mocks/</guid>
+      <description>The situation was that, I needed to mock multiple external service within my application in order to test my application.
+These external services are being consumed using HTTPPoison the popular elixir http client. The mock is achieved using the Mock library
+# ~/multi_mocks.exs Import Mock #Mock multiple functions of the same module test &amp;quot;Test special service that will call other supporting endpoints&amp;quot; do with_mock( HTTPoison, post!: fn endpoint_a, _, _ -&amp;gt; %HTTPoison.</description>
+    </item>
+    
+    <item>
       <title>Testing a phoenix controller</title>
       <link>/post/elixir-controller-testing/</link>
       <pubDate>Wed, 25 Oct 2017 09:47:13 -0400</pubDate>

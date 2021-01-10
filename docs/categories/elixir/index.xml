@@ -8,6 +8,39 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 25 Oct 2017 09:47:13 -0400</lastBuildDate><atom:link href="/categories/elixir/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Composing dynamic queries with ecto</title>
+      <link>/post/elixir-dynamic-queries-with-ecto/</link>
+      <pubDate>Thu, 18 Oct 2018 20:32:00 +0000</pubDate>
+      
+      <guid>/post/elixir-dynamic-queries-with-ecto/</guid>
+      <description>I was recently working on a project where I needed to compose a dynamic query for filtering a table using ecto. The filter parameters are coming from a graphql resolver.
+# ~/query.ex #A sample filter input filter_input = %{status: &amp;quot;AVAILABLE&amp;quot;, genre: &amp;quot;Comedy&amp;quot;, last_update_gte: &amp;quot;2018-10-18 00:00:00&amp;quot;, last_update_lte: &amp;quot;2018-10-18 23:59:59&amp;quot; } #The schema I will be querying defmodule Movies do use Ecto.Schema schema &amp;quot;movies&amp;quot; do field(:genre, :string) field(:status, :string) timestamps() end end #My resolver function defmodule MovieFilter do import Ecto.</description>
+    </item>
+    
+    <item>
+      <title>Testing with Mocks</title>
+      <link>/post/elixir-tests-with-mocks/</link>
+      <pubDate>Tue, 08 May 2018 21:50:00 -0400</pubDate>
+      
+      <guid>/post/elixir-tests-with-mocks/</guid>
+      <description>The situation was that, I needed to mock multiple external service within my application in order to test my application.
+These external services are being consumed using HTTPPoison the popular elixir http client. The mock is achieved using the Mock library
+# ~/multi_mocks.exs Import Mock #Mock multiple functions of the same module test &amp;quot;Test special service that will call other supporting endpoints&amp;quot; do with_mock( HTTPoison, post!: fn endpoint_a, _, _ -&amp;gt; %HTTPoison.</description>
+    </item>
+    
+    <item>
+      <title>Elixir Telegram Bot</title>
+      <link>/post/elixir-telegram-bot/</link>
+      <pubDate>Wed, 27 Dec 2017 21:40:13 -0400</pubDate>
+      
+      <guid>/post/elixir-telegram-bot/</guid>
+      <description>The quest was to develop a telegram bot over 24hrs, during an office hackathon event.
+I started out consulting documentation.
+Bot interaction was implemented as a GenServer named ConversationTree
+defmodule TelegramService.ConversationTree do use GenServer def start_link(name, conversation \\ %{message: [], response: [], tickets: []}) do {:ok, _} = GenServer.start_link(__MODULE__, conversation, name: name) name end def lookup(name) do GenServer.whereis(name) end def kill(name) do GenServer.stop(name) end def write_message(name, message = %{}) do GenServer.</description>
+    </item>
+    
+    <item>
       <title>Testing a phoenix controller</title>
       <link>/post/elixir-controller-testing/</link>
       <pubDate>Wed, 25 Oct 2017 09:47:13 -0400</pubDate>

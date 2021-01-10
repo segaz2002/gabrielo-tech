@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Gabriel Kolawole">
+<meta name="description" content="Knowledge sharing space for code experiences">
+<meta name="generator" content="Hugo 0.25.1" />
+<title>Composing dynamic queries with ecto</title>
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/highlight.css">
+
+<link rel="stylesheet" href="/style.css">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+
+
+<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Tech Kitchen" />
+
+
+<meta property="og:title" content="Composing dynamic queries with ecto" />
+<meta property="og:description" content="Composing non definite query structures with ecto" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/elixir-dynamic-queries-with-ecto/" />
+
+
+
+<meta property="article:published_time" content="2018-10-18T20:32:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-10-18T20:32:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Composing dynamic queries with ecto">
+<meta itemprop="description" content="Composing non definite query structures with ecto">
+
+
+<meta itemprop="dateModified" content="2018-10-18T20:32:00&#43;00:00" />
+<meta itemprop="wordCount" content="200">
+
+
+
+<meta itemprop="keywords" content="elixir,ecto,database,query,graphql," />
+
+
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="Composing dynamic queries with ecto"/>
+<meta name="twitter:title" content="Composing dynamic queries with ecto"/>
+<meta name="twitter:description" content="Composing non definite query structures with ecto"/>
+<meta name="twitter:site" content="@https://www.twitter.com/gabkolawole"/>
+
+
+    </head>
+<body>
+    <nav class="main-nav">
+	
+		<a href='/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+ 		<a href='/about/'>About</a>
+  	
+
+	
+		<a class="cta" href="/index.xml">Subscribe</a>
+	
+</nav>
+
+    <section id="wrapper">
+        
+        
+<article class="post">
+    <header>
+        <h1>Composing dynamic queries with ecto</h1>
+        <h2 class="subtitle">Composing non definite query structures with ecto</h2>
+        <h2 class="headline">
+        October 18, 2018
+        <br>
+        
+        
+            
+                <a href="/tags/elixir">elixir</a>
+            
+                <a href="/tags/ecto">ecto</a>
+            
+                <a href="/tags/database">database</a>
+            
+                <a href="/tags/query">query</a>
+            
+                <a href="/tags/graphql">graphql</a>
+            
+        
+        
+        </h2>
+    </header>
+    <section id="post-body">
+        
+
+<p>I was recently working on a project where I needed to compose a dynamic query for filtering a table using ecto. The filter parameters are coming from a graphql resolver.</p>
+
+<pre><code class="language-ruby"># ~/query.ex
+  #A sample filter input
+  filter_input = %{status: &quot;AVAILABLE&quot;, genre: &quot;Comedy&quot;, last_update_gte: &quot;2018-10-18 00:00:00&quot;, last_update_lte: &quot;2018-10-18 23:59:59&quot; }
+  
+  #The schema I will be querying
+  defmodule Movies do
+    use Ecto.Schema
+    schema &quot;movies&quot; do
+      field(:genre, :string)
+      field(:status, :string)
+      timestamps()
+    end
+  end
+
+  #My resolver function
+
+  defmodule MovieFilter do
+    import Ecto.Query
+
+    def compose_filter(filter_params, base_query = %Ecto.Query{}) do
+      filter_params
+      |&gt; Enum.reduce(base_query, fn filter, acc -&gt;
+        q =
+          case filter do
+            {:last_update_gte, value} -&gt; dynamic([w], w.updated_at &gt;= ^value)
+            {:last_update_lte, value} -&gt; dynamic([w], w.updated_at &lt;= ^value)
+            {:status, value} -&gt; dynamic([w], w.status &gt;= ^value)
+            {:genre, value} -&gt; dynamic([w], w.genre &gt;= ^value)
+          end
+
+        where(acc, ^q)
+      end)
+    end
+  end
+  
+  #usage
+  base_query = from(m in Movies)
+
+  MovieFilter.compose_filter(filter_input, base_query)
+  |&gt; Repo.all()
+
+</code></pre>
+
+<h4 id="explanation">Explanation</h4>
+
+<p>With <code>compose_filter\2</code> we are able to compose a dynamic query, which is derived from user input depending on the desired filter fields, the result of the function which is then passed to <code>Repo.all()</code></p>
+
+<p>The <code>dynamic\2</code> in compose_filter function is imported from Ecto.Query as well as <code>where\3</code></p>
+
+<p>More about the dynamic function is <a href="https://hexdocs.pm/ecto/Ecto.Query.html#dynamic/2">Here</a> in the official documentation of Ecto.</p>
+
+    </section>
+</article>
+
+<footer id="post-meta" class="clearfix">
+    <a href="https://twitter.com/gabkolawole">
+    <img class="avatar" src="/images/avatar.png">
+    <div>
+        <span class="dark">Gabriel Kolawole</span>
+        <span>Software Engineer</span>
+    </div>
+    </a>
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=%2fpost%2felixir-dynamic-queries-with-ecto%2f - Composing%20dynamic%20queries%20with%20ecto by @gabkolawole"><span class="icon-twitter"> tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+    </section>
+</footer>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "gabrielo-tech-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+
+    
+    
+    
+        <li>
+            <a href="/post/elixir-tests-with-mocks/">Testing with Mocks<aside class="dates">May 8 2018</aside></a>
+        </li>
+    
+        <li>
+            <a href="/post/elixir-telegram-bot/">Elixir Telegram Bot<aside class="dates">Dec 27 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/post/elixir-controller-testing/">Testing a phoenix controller<aside class="dates">Oct 25 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/post/elixir-libraries/">List of amazing elixir resource<aside class="dates">Oct 5 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/post/elixir-recursion/">Recursion in elixir<aside class="dates">Sep 21 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/about/">About<aside class="dates">Sep 15 2017</aside></a>
+        </li>
+    
+        <li>
+            <a href="/post/elixir-capture-command/">Elixir capture(&amp;) command<aside class="dates">Sep 14 2017</aside></a>
+        </li>
+    
+</ul>
+
+
+
+        <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/segaz2002">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.linkedin.com/in/gabriel-kolawole-29398757/">
+        <i class="fa fa-linkedin"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/gabkolawole">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2018 Gabriel Kolawole
+    
+    </p>
+</footer>
+
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+</body>
+</html>

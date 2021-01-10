@@ -11,6 +11,7 @@ title = "Recursion in elixir"
 description = "How to perform recursion in elixir "
 
 +++
+I am new to elixir, and I find this interesting at the time of writing, I am coming from NodeJs :)
 
 The major ingredients of recursion are:
 - An exercise to perform repeatedly, 

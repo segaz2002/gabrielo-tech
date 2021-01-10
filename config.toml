@@ -7,7 +7,7 @@ title = "Tech Kitchen"
 theme = "hugo-cactus"
 
 # Enter your tracking code to enable Google Analytics
-googleAnalytics = ""
+googleAnalytics = "UA-155257149-1"
 # Disable comments by leaving disqusShortname empty
 disqusShortname = "gabrielo-tech-1"
 
