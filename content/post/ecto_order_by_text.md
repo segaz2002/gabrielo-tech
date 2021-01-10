@@ -7,7 +7,7 @@ showpagemeta = false
 showcomments = true
 slug = "ecto-order-by-text-field"
 tags = ["elixir", "ecto", "order_by", "fragments"]
-title = "Elixir capture(&) command"
+title = "Ecto order_by text field"
 description = "Order query results by text field"
 
 +++
