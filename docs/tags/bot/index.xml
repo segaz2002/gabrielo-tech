@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bot on Tech Kitchen</title>
+    <title>bot on Tech Kitchen</title>
     <link>/tags/bot/</link>
-    <description>Recent content in Bot on Tech Kitchen</description>
+    <description>Recent content in bot on Tech Kitchen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Dec 2017 21:40:13 -0400</lastBuildDate>
-    
-	<atom:link href="/tags/bot/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 27 Dec 2017 21:40:13 -0400</lastBuildDate><atom:link href="/tags/bot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Elixir Telegram Bot</title>
       <link>/post/elixir-telegram-bot/</link>
