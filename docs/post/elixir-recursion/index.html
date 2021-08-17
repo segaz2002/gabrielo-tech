@@ -1,318 +1,144 @@
 <!DOCTYPE html>
 <html lang="en-us">
-	<head>
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="How to perform recursion in elixir ">
+<meta name="generator" content="Hugo 0.80.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Gabriel Kolawole">
-<meta name="description" content="Knowledge sharing space for code experiences">
-<meta name="generator" content="Hugo 0.25.1" />
-<title>Recursion in elixir</title>
-<link rel="shortcut icon" href="/images/favicon.ico">
-<link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/highlight.css">
-
-<link rel="stylesheet" href="/style.css">
-
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-
-
-
-<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Tech Kitchen" />
-
-
-<meta property="og:title" content="Recursion in elixir" />
-<meta property="og:description" content="How to perform recursion in elixir " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/post/elixir-recursion/" />
-
-
-
-<meta property="article:published_time" content="2017-09-21T17:29:13-04:00"/>
-<meta property="article:modified_time" content="2017-09-21T17:29:13-04:00"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<meta itemprop="name" content="Recursion in elixir">
-<meta itemprop="description" content="How to perform recursion in elixir ">
-
-
-<meta itemprop="dateModified" content="2017-09-21T17:29:13-04:00" />
-<meta itemprop="wordCount" content="471">
-
-
-
-<meta itemprop="keywords" content="elixir,recursion," />
-
-
-
-  <meta name="twitter:card" content="summary"/>
-
-
-
-<meta name="twitter:text:title" content="Recursion in elixir"/>
-<meta name="twitter:title" content="Recursion in elixir"/>
-<meta name="twitter:description" content="How to perform recursion in elixir "/>
-<meta name="twitter:site" content="@https://www.twitter.com/gabkolawole"/>
-
-
-    </head>
+<link rel="stylesheet" href="/css/style.css" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" type="text/css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="Tech Kitchen">
+<title>Recursion in elixir - Tech Kitchen</title>
+</head>
 <body>
-    <nav class="main-nav">
-	
-		<a href='/'> <span class="arrow">←</span>Home</a>
-	
 
-	
- 		<a href='/about/'>About</a>
-  	
+<header>
+  <div class="container clearfix">
+    <a class="path" href="/">[Tech Kitchen]</a>
+    <span class="caret"># _</span>
+    <div class="right">
+      
+    </div>
+  </div>
+</header>
 
-	
-		<a class="cta" href="/index.xml">Subscribe</a>
-	
-</nav>
+<div class="container">
 
-    <section id="wrapper">
-        
-        
-<article class="post">
-    <header>
-        <h1>Recursion in elixir</h1>
-        <h2 class="subtitle">How to perform recursion in elixir</h2>
-        <h2 class="headline">
-        September 21, 2017
-        <br>
-        
-        
-            
-                <a href="/tags/elixir">elixir</a>
-            
-                <a href="/tags/recursion">recursion</a>
-            
-        
-        
-        </h2>
-    </header>
-    <section id="post-body">
-        
 
-<p>I am new to elixir, and I find this interesting at the time of writing, I am coming from NodeJs :)</p>
+<main role="main" class="article">
+  
+<article class="single" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="meta">
 
-<p>The major ingredients of recursion are:
-- An exercise to perform repeatedly,
-- A condition to break off the repeated exercise</p>
+    <span class="key">published on</span>
+    <span class="val"><time itemprop="datePublished" datetime="2017-09-21">September 21, 2017</time></span>
 
+
+    <span class="key">in</span>
+    <span class="val">
+
+        <a href="/categories/elixir">elixir</a>
+
+    </span>
+
+
+    <br>
+    <span class="key">tags:</span>
+    <span class="val">
+
+        <a href="/tags/elixir">elixir</a>
+
+        <a href="/tags/recursion">recursion</a>
+
+    </span>
+
+  </div>
+  <h1 class="headline" itemprop="headline">Recursion in elixir</h1>
+  <section class="body" itemprop="articleBody">
+    <p>I am new to elixir, and I find this interesting at the time of writing, I am coming from NodeJs :)</p>
+<p>The major ingredients of recursion are:</p>
+<ul>
+<li>An exercise to perform repeatedly,</li>
+<li>A condition to break off the repeated exercise</li>
+</ul>
 <p>Lets say we want to write a function that will return building identifiers where restaurants have not yet closed.
 The first argument is the current hour as integer, the second argument is the current minute as integer, the third argument
 is the list of restaurants containing; the name of the canteen, building identifier, closing hour, closing minute.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mix new restaurant
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># ~/restaurant/lib/restaurant.ex</span>
 
-<pre><code class="language-bash">mix new restaurant
-</code></pre>
+defmodule <span style="color:#66d9ef">Restaurant</span> <span style="color:#66d9ef">do</span>
+  defstruct name: <span style="color:#66d9ef">nil</span>, id: <span style="color:#66d9ef">nil</span>, <span style="color:#e6db74">closing_hour</span>: <span style="color:#66d9ef">nil</span>, <span style="color:#e6db74">closing_minute</span>: <span style="color:#66d9ef">nil</span>
 
-<pre><code class="language-ruby"># ~/restaurant/lib/restaurant.ex
+	<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_opened</span>(hour, minute, restaurants) <span style="color:#66d9ef">do</span>
+		check_if_opened(hour, minute, restaurants, <span style="color:#f92672">[]</span>)
+	<span style="color:#66d9ef">end</span>
 
-defmodule Restaurant do
-  defstruct name: nil, id: nil, closing_hour: nil, closing_minute: nil
-
-	def get_opened(hour, minute, restaurants) do
-		check_if_opened(hour, minute, restaurants, [])
-	end
-
-	defp check_if_opened(hour, minute, [restaurant = %Restaurant{closing_hour: c_hour, closing_minute: c_minute} | tail], accumulator)
-    do
-      case (c_hour &gt;= hour) do
-        true when (c_hour != hour) -&gt; check_if_opened(hour, minute, tail, (accumulator ++ [restaurant]))
-        true when (c_hour == hour) -&gt; fn  -&gt;
-            case (minute &lt; c_minute) do
-              true -&gt; check_if_opened(hour, minute, tail, (accumulator ++ [restaurant]))
-              false -&gt; check_if_opened(hour, minute, tail, accumulator)
-            end
-          end.()
-        false -&gt; check_if_opened(hour, minute, tail, accumulator)
-      end
-  end
-	defp check_if_opened(_, _, [], acummulator) do
+	defp check_if_opened(hour, minute, <span style="color:#f92672">[</span>restaurant <span style="color:#f92672">=</span> <span style="color:#f92672">%</span><span style="color:#66d9ef">Restaurant</span>{<span style="color:#e6db74">closing_hour</span>: c_hour, <span style="color:#e6db74">closing_minute</span>: c_minute} <span style="color:#f92672">|</span> tail<span style="color:#f92672">]</span>, accumulator)
+    <span style="color:#66d9ef">do</span>
+      <span style="color:#66d9ef">case</span> (c_hour <span style="color:#f92672">&gt;=</span> hour) <span style="color:#66d9ef">do</span>
+        <span style="color:#66d9ef">true</span> <span style="color:#66d9ef">when</span> (c_hour <span style="color:#f92672">!=</span> hour) <span style="color:#f92672">-&gt;</span> check_if_opened(hour, minute, tail, (accumulator <span style="color:#f92672">++</span> <span style="color:#f92672">[</span>restaurant<span style="color:#f92672">]</span>))
+        <span style="color:#66d9ef">true</span> <span style="color:#66d9ef">when</span> (c_hour <span style="color:#f92672">==</span> hour) <span style="color:#f92672">-&gt;</span> fn  <span style="color:#f92672">-&gt;</span>
+            <span style="color:#66d9ef">case</span> (minute <span style="color:#f92672">&lt;</span> c_minute) <span style="color:#66d9ef">do</span>
+              <span style="color:#66d9ef">true</span> <span style="color:#f92672">-&gt;</span> check_if_opened(hour, minute, tail, (accumulator <span style="color:#f92672">++</span> <span style="color:#f92672">[</span>restaurant<span style="color:#f92672">]</span>))
+              <span style="color:#66d9ef">false</span> <span style="color:#f92672">-&gt;</span> check_if_opened(hour, minute, tail, accumulator)
+            <span style="color:#66d9ef">end</span>
+          <span style="color:#66d9ef">end</span><span style="color:#f92672">.</span>()
+        <span style="color:#66d9ef">false</span> <span style="color:#f92672">-&gt;</span> check_if_opened(hour, minute, tail, accumulator)
+      <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">end</span>
+	defp check_if_opened(_, _, <span style="color:#f92672">[]</span>, acummulator) <span style="color:#66d9ef">do</span>
 		acummulator
-  end
-end
-</code></pre>
-
-<h4 id="explanation">Explanation</h4>
-
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><h4 id="explanation">Explanation</h4>
 <p><code>get_opened\3</code> is the public function that is called, and this is given the parameters described earlier, the hour, minute and
 the list of restaurants we want to check recursively using the <code>check_if_opened\4</code> function. There are two <code>check_if_opened\4</code> functions,
 thanks to the magic of elixir, this is pattern matching at work. When <code>check_if_opened\4</code> is called it will only match one based on the parameters
 defined on the function.</p>
-
 <p>In our case we have <code>check_if_opend\4</code> which is targeting an empty restaurant list and another one which will match a non empty list.
 Which is our golden plan of breaking off from the recursion.</p>
-
 <p>This comes to mind when looking at this solution &ldquo;An Enum method could have been used to operate on the restaurant list&rdquo;, yes, this is possible
 but the objective of this snippet is to demonstrate the explicit filtering of the restaurants in order to showcase recursion in elixir.</p>
-
 <p>Let&rsquo;s test our restaurant module:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e">#~/restaurant/test/restaurant_test.exs</span>
+defmodule <span style="color:#66d9ef">RestaurantTest</span> <span style="color:#66d9ef">do</span>
+  use <span style="color:#66d9ef">ExUnit</span><span style="color:#f92672">.</span>Case
 
-<pre><code class="language-ruby">#~/restaurant/test/restaurant_test.exs
-defmodule RestaurantTest do
-  use ExUnit.Case
+  setup_all <span style="color:#66d9ef">do</span>
+    restaurants_list <span style="color:#f92672">=</span> <span style="color:#f92672">[</span>
+      <span style="color:#f92672">%</span><span style="color:#66d9ef">Restaurant</span>{name: <span style="color:#e6db74">&#34;Kohvic center&#34;</span>, id: <span style="color:#e6db74">&#34;KHV&#34;</span>, <span style="color:#e6db74">closing_hour</span>: <span style="color:#ae81ff">16</span>, <span style="color:#e6db74">closing_minute</span>: <span style="color:#ae81ff">30</span>},
+      <span style="color:#f92672">%</span><span style="color:#66d9ef">Restaurant</span>{name: <span style="color:#e6db74">&#34;Kohvic center2&#34;</span>, id: <span style="color:#e6db74">&#34;KHV2&#34;</span>, <span style="color:#e6db74">closing_hour</span>: <span style="color:#ae81ff">14</span>, <span style="color:#e6db74">closing_minute</span>: <span style="color:#ae81ff">00</span>},
+      <span style="color:#f92672">%</span><span style="color:#66d9ef">Restaurant</span>{name: <span style="color:#e6db74">&#34;Liivi 2 Restaurant&#34;</span>, id: <span style="color:#e6db74">&#34;Liivi-2&#34;</span>, <span style="color:#e6db74">closing_hour</span>: <span style="color:#ae81ff">19</span>, <span style="color:#e6db74">closing_minute</span>: <span style="color:#ae81ff">45</span>},
+    <span style="color:#f92672">]</span>
+    {<span style="color:#e6db74">:ok</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">restaurants</span>: restaurants_list<span style="color:#f92672">]</span>}
+  <span style="color:#66d9ef">end</span>
 
-  setup_all do
-    restaurants_list = [
-      %Restaurant{name: &quot;Kohvic center&quot;, id: &quot;KHV&quot;, closing_hour: 16, closing_minute: 30},
-      %Restaurant{name: &quot;Kohvic center2&quot;, id: &quot;KHV2&quot;, closing_hour: 14, closing_minute: 00},
-      %Restaurant{name: &quot;Liivi 2 Restaurant&quot;, id: &quot;Liivi-2&quot;, closing_hour: 19, closing_minute: 45},
-    ]
-    {:ok, [restaurants: restaurants_list]}
-  end
+  test <span style="color:#e6db74">&#34;check available restaurants for 16:46&#34;</span>, <span style="color:#e6db74">%{restaurants: restaurants}</span> <span style="color:#66d9ef">do</span>
+    assert <span style="color:#f92672">[%</span><span style="color:#66d9ef">Restaurant</span>{id: <span style="color:#e6db74">&#34;Liivi-2&#34;</span>}<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">Restaurant</span><span style="color:#f92672">.</span>get_opened(<span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">46</span>, restaurants) <span style="color:#75715e">#One restaturant should be opened</span>
+  <span style="color:#66d9ef">end</span>
 
-  test &quot;check available restaurants for 16:46&quot;, %{restaurants: restaurants} do
-    assert [%Restaurant{id: &quot;Liivi-2&quot;}] = Restaurant.get_opened(16, 46, restaurants) #One restaturant should be opened
-  end
+  test <span style="color:#e6db74">&#34;check available restaurants for 18:46&#34;</span>, <span style="color:#e6db74">%{restaurants: restaurants}</span> <span style="color:#66d9ef">do</span>
+    assert <span style="color:#ae81ff">0</span> <span style="color:#f92672">=</span> length(<span style="color:#66d9ef">Restaurant</span><span style="color:#f92672">.</span>get_opened(<span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">46</span>, restaurants)) <span style="color:#75715e">#All restaurants should be closed for this time</span>
+  <span style="color:#66d9ef">end</span>
 
-  test &quot;check available restaurants for 18:46&quot;, %{restaurants: restaurants} do
-    assert 0 = length(Restaurant.get_opened(19, 46, restaurants)) #All restaurants should be closed for this time
-  end
-
-  test &quot;check available restaurants for 13:00&quot;, %{restaurants: restaurants} do
-    assert 3 = length(Restaurant.get_opened(13, 00, restaurants)) #All restaurants should be opened by this time
-  end
-</code></pre>
-
-    </section>
+  test <span style="color:#e6db74">&#34;check available restaurants for 13:00&#34;</span>, <span style="color:#e6db74">%{restaurants: restaurants}</span> <span style="color:#66d9ef">do</span>
+    assert <span style="color:#ae81ff">3</span> <span style="color:#f92672">=</span> length(<span style="color:#66d9ef">Restaurant</span><span style="color:#f92672">.</span>get_opened(<span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">00</span>, restaurants)) <span style="color:#75715e">#All restaurants should be opened by this time</span>
+  <span style="color:#66d9ef">end</span>
+</code></pre></div>
+  </section>
 </article>
 
-<footer id="post-meta" class="clearfix">
-    <a href="https://twitter.com/gabkolawole">
-    <img class="avatar" src="/images/avatar.png">
-    <div>
-        <span class="dark">Gabriel Kolawole</span>
-        <span>Software Engineer</span>
-    </div>
-    </a>
-    <section id="sharing">
-        <a class="twitter" href="https://twitter.com/intent/tweet?text=%2fpost%2felixir-recursion%2f - Recursion%20in%20elixir by @gabkolawole"><span class="icon-twitter"> tweet</span></a>
-
-<a class="facebook" href="#" onclick="
-    window.open(
-      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
-      'facebook-share-dialog',
-      'width=626,height=436');
-    return false;"><span class="icon-facebook-rect"> Share</span>
-</a>
-
-    </section>
-</footer>
-
-<div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "gabrielo-tech-1" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-<ul id="post-list" class="archive readmore">
-    <h3>Read more</h3>
-
-    
-    
-    
-        <li>
-            <a href="/post/elixir-dynamic-queries-with-ecto/">Composing dynamic queries with ecto<aside class="dates">Oct 18 2018</aside></a>
-        </li>
-    
-        <li>
-            <a href="/post/elixir-tests-with-mocks/">Testing with Mocks<aside class="dates">May 8 2018</aside></a>
-        </li>
-    
-        <li>
-            <a href="/post/elixir-telegram-bot/">Elixir Telegram Bot<aside class="dates">Dec 27 2017</aside></a>
-        </li>
-    
-        <li>
-            <a href="/post/elixir-controller-testing/">Testing a phoenix controller<aside class="dates">Oct 25 2017</aside></a>
-        </li>
-    
-        <li>
-            <a href="/post/elixir-libraries/">List of amazing elixir resource<aside class="dates">Oct 5 2017</aside></a>
-        </li>
-    
-        <li>
-            <a href="/about/">About<aside class="dates">Sep 15 2017</aside></a>
-        </li>
-    
-        <li>
-            <a href="/post/elixir-capture-command/">Elixir capture(&amp;) command<aside class="dates">Sep 14 2017</aside></a>
-        </li>
-    
-</ul>
-
-
-
-        <footer id="footer">
-    
-        <div id="social">
-
-	
-	
-    <a class="symbol" href="https://www.github.com/segaz2002">
-        <i class="fa fa-github"></i>
-    </a>
-    
-    <a class="symbol" href="https://www.linkedin.com/in/gabriel-kolawole-29398757/">
-        <i class="fa fa-linkedin"></i>
-    </a>
-    
-    <a class="symbol" href="https://www.twitter.com/gabkolawole">
-        <i class="fa fa-twitter"></i>
-    </a>
-    
-
+</main>
 
 </div>
 
-    
-    <p class="small">
-    
-        © Copyright 2018 Gabriel Kolawole
-    
-    </p>
+<footer>
+  <div class="container">
+    <span class="copyright">&copy; 2018 Tech Kitchen - <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span>
+  </div>
 </footer>
-
-    </section>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/highlight.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
 
 </body>
 </html>
+

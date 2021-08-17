@@ -1,282 +1,114 @@
 <!DOCTYPE html>
 <html lang="en-us">
-	<head>
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Mocking functions that returns different results with different inputs in elixir">
+<meta name="generator" content="Hugo 0.80.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Gabriel Kolawole">
-<meta name="description" content="Knowledge sharing space for code experiences">
-<meta name="generator" content="Hugo 0.25.1" />
-<title>Testing with Mocks</title>
-<link rel="shortcut icon" href="/images/favicon.ico">
-<link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/highlight.css">
-
-<link rel="stylesheet" href="/style.css">
-
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-
-
-
-<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Tech Kitchen" />
-
-
-<meta property="og:title" content="Testing with Mocks" />
-<meta property="og:description" content="Mocking functions that returns different results with different inputs in elixir" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/post/elixir-tests-with-mocks/" />
-
-
-
-<meta property="article:published_time" content="2018-05-08T21:50:00-04:00"/>
-<meta property="article:modified_time" content="2018-05-08T21:50:00-04:00"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<meta itemprop="name" content="Testing with Mocks">
-<meta itemprop="description" content="Mocking functions that returns different results with different inputs in elixir">
-
-
-<meta itemprop="dateModified" content="2018-05-08T21:50:00-04:00" />
-<meta itemprop="wordCount" content="197">
-
-
-
-<meta itemprop="keywords" content="elixir,testing,mocking," />
-
-
-
-  <meta name="twitter:card" content="summary"/>
-
-
-
-<meta name="twitter:text:title" content="Testing with Mocks"/>
-<meta name="twitter:title" content="Testing with Mocks"/>
-<meta name="twitter:description" content="Mocking functions that returns different results with different inputs in elixir"/>
-<meta name="twitter:site" content="@https://www.twitter.com/gabkolawole"/>
-
-
-    </head>
+<link rel="stylesheet" href="/css/style.css" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" type="text/css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="Tech Kitchen">
+<title>Testing with Mocks - Tech Kitchen</title>
+</head>
 <body>
-    <nav class="main-nav">
-	
-		<a href='/'> <span class="arrow">←</span>Home</a>
-	
 
-	
- 		<a href='/about/'>About</a>
-  	
+<header>
+  <div class="container clearfix">
+    <a class="path" href="/">[Tech Kitchen]</a>
+    <span class="caret"># _</span>
+    <div class="right">
+      
+    </div>
+  </div>
+</header>
 
-	
-		<a class="cta" href="/index.xml">Subscribe</a>
-	
-</nav>
+<div class="container">
 
-    <section id="wrapper">
-        
-        
-<article class="post">
-    <header>
-        <h1>Testing with Mocks</h1>
-        <h2 class="subtitle">Mocking functions that returns different results with different inputs in elixir</h2>
-        <h2 class="headline">
-        May 8, 2018
-        <br>
-        
-        
-            
-                <a href="/tags/elixir">elixir</a>
-            
-                <a href="/tags/testing">testing</a>
-            
-                <a href="/tags/mocking">mocking</a>
-            
-        
-        
-        </h2>
-    </header>
-    <section id="post-body">
-        
 
-<p>The situation was that, I needed to mock multiple external service within my application in order to test my application.</p>
+<main role="main" class="article">
+  
+<article class="single" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="meta">
 
+    <span class="key">published on</span>
+    <span class="val"><time itemprop="datePublished" datetime="2018-05-08">May 08, 2018</time></span>
+
+
+    <span class="key">in</span>
+    <span class="val">
+
+        <a href="/categories/elixir">elixir</a>
+
+    </span>
+
+
+    <br>
+    <span class="key">tags:</span>
+    <span class="val">
+
+        <a href="/tags/elixir">elixir</a>
+
+        <a href="/tags/testing">testing</a>
+
+        <a href="/tags/mocking">mocking</a>
+
+    </span>
+
+  </div>
+  <h1 class="headline" itemprop="headline">Testing with Mocks</h1>
+  <section class="body" itemprop="articleBody">
+    <p>The situation was that, I needed to mock multiple external service within my application in order to test my application.</p>
 <p>These external services are being consumed using HTTPPoison the popular elixir http client. The mock is achieved using the <a href="https://github.com/jjh42/mock">Mock</a> library</p>
-
-<pre><code class="language-ruby"># ~/multi_mocks.exs
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># ~/multi_mocks.exs</span>
   
-  Import Mock
+  <span style="color:#66d9ef">Import</span> <span style="color:#66d9ef">Mock</span>
   
-  #Mock multiple functions of the same module
-  test &quot;Test special service that will call other supporting endpoints&quot; do
+  <span style="color:#75715e">#Mock multiple functions of the same module</span>
+  test <span style="color:#e6db74">&#34;Test special service that will call other supporting endpoints&#34;</span> <span style="color:#66d9ef">do</span>
     with_mock(
-      HTTPoison,
+      <span style="color:#66d9ef">HTTPoison</span>,
       post!: fn
-        endpoint_a, _, _ -&gt; %HTTPoison.Response{body: endpoint_a_response_body}
-        endpoint_b, _, _ -&gt; %HTTPoison.Response{body: endpoint_b_response_body}
-        endpoint_c, _, _ -&gt; %HTTPoison.Response{body: endpoint_c_response_body}
-      end
-    ) do
-      assert {:ok, _} = call_to_special_servicer()
-    end
-  end
+        endpoint_a, _, _ <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">%</span><span style="color:#66d9ef">HTTPoison</span><span style="color:#f92672">.</span>Response{<span style="color:#e6db74">body</span>: endpoint_a_response_body}
+        endpoint_b, _, _ <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">%</span><span style="color:#66d9ef">HTTPoison</span><span style="color:#f92672">.</span>Response{<span style="color:#e6db74">body</span>: endpoint_b_response_body}
+        endpoint_c, _, _ <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">%</span><span style="color:#66d9ef">HTTPoison</span><span style="color:#f92672">.</span>Response{<span style="color:#e6db74">body</span>: endpoint_c_response_body}
+      <span style="color:#66d9ef">end</span>
+    ) <span style="color:#66d9ef">do</span>
+      assert {<span style="color:#e6db74">:ok</span>, _} <span style="color:#f92672">=</span> call_to_special_servicer()
+    <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">end</span>
 
-  #Mock multiple modules with their functions
-  with_mocks([
-        {ModuleA, [],
-         [
-           function_a: fn _, _ -&gt; mock_desired_return end,
-           function_b: fn _, _ -&gt; mock_desired_return end
-         ]},
-        {ModuleB, [], [function_c: fn _, _ -&gt; mock_desired_return end]},
-        {ModuleC, [],
-         [
-           function_d: fn _ -&gt; mock_desired_return end,
-           function_e: fn _ -&gt; mock_desired_return end
-         ]}
-      ]) do
-        assert left = right
-      end
-</code></pre>
-
-<h4 id="explanation">Explanation</h4>
-
+  <span style="color:#75715e">#Mock multiple modules with their functions</span>
+  with_mocks(<span style="color:#f92672">[</span>
+        {<span style="color:#66d9ef">ModuleA</span>, <span style="color:#f92672">[]</span>,
+         <span style="color:#f92672">[</span>
+           <span style="color:#e6db74">function_a</span>: fn _, _ <span style="color:#f92672">-&gt;</span> mock_desired_return <span style="color:#66d9ef">end</span>,
+           <span style="color:#e6db74">function_b</span>: fn _, _ <span style="color:#f92672">-&gt;</span> mock_desired_return <span style="color:#66d9ef">end</span>
+         <span style="color:#f92672">]</span>},
+        {<span style="color:#66d9ef">ModuleB</span>, <span style="color:#f92672">[]</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">function_c</span>: fn _, _ <span style="color:#f92672">-&gt;</span> mock_desired_return <span style="color:#66d9ef">end</span><span style="color:#f92672">]</span>},
+        {<span style="color:#66d9ef">ModuleC</span>, <span style="color:#f92672">[]</span>,
+         <span style="color:#f92672">[</span>
+           <span style="color:#e6db74">function_d</span>: fn _ <span style="color:#f92672">-&gt;</span> mock_desired_return <span style="color:#66d9ef">end</span>,
+           <span style="color:#e6db74">function_e</span>: fn _ <span style="color:#f92672">-&gt;</span> mock_desired_return <span style="color:#66d9ef">end</span>
+         <span style="color:#f92672">]</span>}
+      <span style="color:#f92672">]</span>) <span style="color:#66d9ef">do</span>
+        assert left <span style="color:#f92672">=</span> right
+      <span style="color:#66d9ef">end</span>
+</code></pre></div><h4 id="explanation">Explanation</h4>
 <p>when <code>call_to_special_service\0</code> is called from within the test, during execution when <code>HTTPPoison.post!\3</code> fired with the given endpoints as url, the call results to the respective responses. With this we can easily pretend as if it was the real external service that was in action.</p>
 
-    </section>
+  </section>
 </article>
 
-<footer id="post-meta" class="clearfix">
-    <a href="https://twitter.com/gabkolawole">
-    <img class="avatar" src="/images/avatar.png">
-    <div>
-        <span class="dark">Gabriel Kolawole</span>
-        <span>Software Engineer</span>
-    </div>
-    </a>
-    <section id="sharing">
-        <a class="twitter" href="https://twitter.com/intent/tweet?text=%2fpost%2felixir-tests-with-mocks%2f - Testing%20with%20Mocks by @gabkolawole"><span class="icon-twitter"> tweet</span></a>
-
-<a class="facebook" href="#" onclick="
-    window.open(
-      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
-      'facebook-share-dialog',
-      'width=626,height=436');
-    return false;"><span class="icon-facebook-rect"> Share</span>
-</a>
-
-    </section>
-</footer>
-
-<div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "gabrielo-tech-1" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-<ul id="post-list" class="archive readmore">
-    <h3>Read more</h3>
-
-    
-    
-    
-        <li>
-            <a href="/post/elixir-dynamic-queries-with-ecto/">Composing dynamic queries with ecto<aside class="dates">Oct 18 2018</aside></a>
-        </li>
-    
-        <li>
-            <a href="/post/elixir-telegram-bot/">Elixir Telegram Bot<aside class="dates">Dec 27 2017</aside></a>
-        </li>
-    
-        <li>
-            <a href="/post/elixir-controller-testing/">Testing a phoenix controller<aside class="dates">Oct 25 2017</aside></a>
-        </li>
-    
-        <li>
-            <a href="/post/elixir-libraries/">List of amazing elixir resource<aside class="dates">Oct 5 2017</aside></a>
-        </li>
-    
-        <li>
-            <a href="/post/elixir-recursion/">Recursion in elixir<aside class="dates">Sep 21 2017</aside></a>
-        </li>
-    
-        <li>
-            <a href="/about/">About<aside class="dates">Sep 15 2017</aside></a>
-        </li>
-    
-        <li>
-            <a href="/post/elixir-capture-command/">Elixir capture(&amp;) command<aside class="dates">Sep 14 2017</aside></a>
-        </li>
-    
-</ul>
-
-
-
-        <footer id="footer">
-    
-        <div id="social">
-
-	
-	
-    <a class="symbol" href="https://www.github.com/segaz2002">
-        <i class="fa fa-github"></i>
-    </a>
-    
-    <a class="symbol" href="https://www.linkedin.com/in/gabriel-kolawole-29398757/">
-        <i class="fa fa-linkedin"></i>
-    </a>
-    
-    <a class="symbol" href="https://www.twitter.com/gabkolawole">
-        <i class="fa fa-twitter"></i>
-    </a>
-    
-
+</main>
 
 </div>
 
-    
-    <p class="small">
-    
-        © Copyright 2018 Gabriel Kolawole
-    
-    </p>
+<footer>
+  <div class="container">
+    <span class="copyright">&copy; 2018 Tech Kitchen - <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span>
+  </div>
 </footer>
-
-    </section>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/highlight.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
 
 </body>
 </html>
+

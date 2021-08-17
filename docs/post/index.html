@@ -1,168 +1,104 @@
 <!DOCTYPE html>
 <html lang="en-us">
-	<head>
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Gabriel Kolawole">
+<head>
+<meta charset="utf-8">
 <meta name="description" content="Knowledge sharing space for code experiences">
-<meta name="generator" content="Hugo 0.25.1" />
-<title>Posts</title>
-<link rel="shortcut icon" href="/images/favicon.ico">
-<link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/highlight.css">
-
-<link rel="stylesheet" href="/style.css">
-
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-
-
-
-<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Tech Kitchen" />
-
-
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="Knowledge sharing space for code experiences" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/post/" />
-
-
-
-<meta property="og:updated_time" content="2018-10-18T20:32:00&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
-
-
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="Knowledge sharing space for code experiences">
-
-
-
-
-    </head>
+<meta name="generator" content="Hugo 0.80.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/style.css" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" type="text/css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="Tech Kitchen">
+<title>Posts - Tech Kitchen</title>
+</head>
 <body>
-    <nav class="main-nav">
-	
-		<a href='/'> <span class="arrow">←</span>Home</a>
-	
 
-	
- 		<a href='/about/'>About</a>
-  	
+<header>
+  <div class="container clearfix">
+    <a class="path" href="/">[Tech Kitchen]</a>
+    <span class="caret"># _</span>
+    <div class="right">
+      
+    </div>
+  </div>
+</header>
 
-	
-		<a class="cta" href="/index.xml">Subscribe</a>
-	
-</nav>
-
-    <section id="wrapper">
-        <div class="profile">
-    <section id="wrapper">
-        <header id="header">
-            <a href="/about">
-                <img id="avatar" class="2x" src="/images/avatar.png"/>
-            </a>
-            <h1>Gabriel Kolawole</h1>
-            <h2>Software Engineer</h2>
-        </header>
-    </section>
-</div>
-
-        
-		<ul id="post-list">
-    
-        <li>
-            <a href='/post/elixir-dynamic-queries-with-ecto/'><aside class="dates">Oct 18 2018</aside></a>
-            <a href='/post/elixir-dynamic-queries-with-ecto/'>Composing dynamic queries with ecto<h2>Composing non definite query structures with ecto</h2></a>
-        </li>
-    
-        <li>
-            <a href='/post/elixir-tests-with-mocks/'><aside class="dates">May 8 2018</aside></a>
-            <a href='/post/elixir-tests-with-mocks/'>Testing with Mocks<h2>Mocking functions that returns different results with different inputs in elixir</h2></a>
-        </li>
-    
-        <li>
-            <a href='/post/elixir-telegram-bot/'><aside class="dates">Dec 27 2017</aside></a>
-            <a href='/post/elixir-telegram-bot/'>Elixir Telegram Bot<h2>Telegram Bot backend implementation with elixir</h2></a>
-        </li>
-    
-        <li>
-            <a href='/post/elixir-controller-testing/'><aside class="dates">Oct 25 2017</aside></a>
-            <a href='/post/elixir-controller-testing/'>Testing a phoenix controller<h2>Elixir phoenix controller test with Plug.Test</h2></a>
-        </li>
-    
-        <li>
-            <a href='/post/elixir-libraries/'><aside class="dates">Oct 5 2017</aside></a>
-            <a href='/post/elixir-libraries/'>List of amazing elixir resource<h2>Useful third party libraries for elixir development</h2></a>
-        </li>
-    
-        <li>
-            <a href='/post/elixir-recursion/'><aside class="dates">Sep 21 2017</aside></a>
-            <a href='/post/elixir-recursion/'>Recursion in elixir<h2>How to perform recursion in elixir</h2></a>
-        </li>
-    
-        <li>
-            <a href='/post/elixir-capture-command/'><aside class="dates">Sep 14 2017</aside></a>
-            <a href='/post/elixir-capture-command/'>Elixir capture(&amp;) command<h2>Simple explanation for the capture command</h2></a>
-        </li>
-    
-</ul>
-
-        <nav id="post-nav">
-    
-</nav>
+<div class="container">
 
 
+<main role="main" class="article-list">
+  <h1 class="list-title">Posts</h1>
+  
+    <article class="list-item" itemscope itemtype="http://schema.org/Blog">
+  <h2 class="headline" itemprop="headline"><a href="/post/elixir-dynamic-queries-with-ecto/">Composing dynamic queries with ecto</a></h2>
+  <div class="meta">
 
-        <footer id="footer">
-    
-        <div id="social">
+    <span class="key">published on</span>
+    <span class="val"><time itemprop="datePublished" datetime="2018-10-18">October 18, 2018</time></span>
 
-	
-	
-    <a class="symbol" href="https://www.github.com/segaz2002">
-        <i class="fa fa-github"></i>
-    </a>
+  </div>
+  <section class="summary">
+    I was recently working on a project where I needed to compose a dynamic query for filtering a table using ecto. The filter parameters are coming from a graphql resolver.
+# ~/query.ex #A sample filter input filter_input = %{status: &#34;AVAILABLE&#34;, genre: &#34;Comedy&#34;, last_update_gte: &#34;2018-10-18 00:00:00&#34;, last_update_lte: &#34;2018-10-18 23:59:59&#34; } #The schema I will be querying defmodule Movies do use Ecto.Schema schema &#34;movies&#34; do field(:genre, :string) field(:status, :string) timestamps() end end #My resolver function defmodule MovieFilter do import Ecto.  <a href="/post/elixir-dynamic-queries-with-ecto/">Read More...</a>
+  </section>
+</article>
+
+  
+    <article class="list-item" itemscope itemtype="http://schema.org/Blog">
+  <h2 class="headline" itemprop="headline"><a href="/post/elixir-tests-with-mocks/">Testing with Mocks</a></h2>
+  <div class="meta">
+
+    <span class="key">published on</span>
+    <span class="val"><time itemprop="datePublished" datetime="2018-05-08">May 08, 2018</time></span>
+
+  </div>
+  <section class="summary">
+    The situation was that, I needed to mock multiple external service within my application in order to test my application.
+These external services are being consumed using HTTPPoison the popular elixir http client. The mock is achieved using the Mock library
+# ~/multi_mocks.exs Import Mock #Mock multiple functions of the same module test &#34;Test special service that will call other supporting endpoints&#34; do with_mock( HTTPoison, post!: fn endpoint_a, _, _ -&gt; %HTTPoison.  <a href="/post/elixir-tests-with-mocks/">Read More...</a>
+  </section>
+</article>
+
+  
+    <article class="list-item" itemscope itemtype="http://schema.org/Blog">
+  <h2 class="headline" itemprop="headline"><a href="/post/elixir-telegram-bot/">Elixir Telegram Bot</a></h2>
+  <div class="meta">
+
+    <span class="key">published on</span>
+    <span class="val"><time itemprop="datePublished" datetime="2017-12-27">December 27, 2017</time></span>
+
+  </div>
+  <section class="summary">
+    The quest was to develop a telegram bot over 24hrs, during an office hackathon event.
+I started out consulting documentation.
+Bot interaction was implemented as a GenServer named ConversationTree
+defmodule TelegramService.ConversationTree do use GenServer def start_link(name, conversation \\ %{message: [], response: [], tickets: []}) do {:ok, _} = GenServer.start_link(__MODULE__, conversation, name: name) name end def lookup(name) do GenServer.whereis(name) end def kill(name) do GenServer.stop(name) end def write_message(name, message = %{}) do GenServer.  <a href="/post/elixir-telegram-bot/">Read More...</a>
+  </section>
+</article>
+
+  
+</main>
+
+  <nav class="paginator">
     
-    <a class="symbol" href="https://www.linkedin.com/in/gabriel-kolawole-29398757/">
-        <i class="fa fa-linkedin"></i>
-    </a>
+    <span class="nav-left faded">&lt; Prev</span>
     
-    <a class="symbol" href="https://www.twitter.com/gabkolawole">
-        <i class="fa fa-twitter"></i>
-    </a>
+
+    <span>1 / 3</span>
+
     
+    <a class="nav-right" href="/post/page/2/">Next &gt;</a>
+    
+  </nav>
 
 
 </div>
 
-    
-    <p class="small">
-    
-        © Copyright 2018 Gabriel Kolawole
-    
-    </p>
+<footer>
+  <div class="container">
+    <span class="copyright">&copy; 2018 Tech Kitchen - <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span>
+  </div>
 </footer>
-
-    </section>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/highlight.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
 
 </body>
 </html>
+
