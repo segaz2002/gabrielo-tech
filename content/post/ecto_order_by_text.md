@@ -2,7 +2,7 @@
 categories = ["elixir", "ecto", "database"]
 comments = true
 date = "2020-11-18T20:38"
-draft = true
+draft = false
 showpagemeta = false
 showcomments = true
 slug = "ecto-order-by-text-field"
@@ -55,9 +55,6 @@ Off we go
 
 ```
 
-Just like that our jobs records will be returned in the order which we have specified in the `@statuses_order` module attribute string.
+Just like that, our jobs records will be returned in the order which we have specified in the `@statuses_order` module attribute string.
 
-More information about this subject from elixir forum can be found here [here](https://elixirforum.com/t/error-interpolating-a-variable-as-the-first-argument-of-an-ecto-fragment/6711/2).
-
-Thats it! :) 
-
+Read more here [here](https://elixirforum.com/t/error-interpolating-a-variable-as-the-first-argument-of-an-ecto-fragment/6711/2).
