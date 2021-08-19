@@ -6,20 +6,11 @@
     <description>Recent content in Tags on Tech Kitchen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Oct 2018 20:32:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>database</title>
-      <link>/tags/database/</link>
-      <pubDate>Thu, 18 Oct 2018 20:32:00 +0000</pubDate>
-      
-      <guid>/tags/database/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Wed, 18 Nov 2020 20:38:13 -0400</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ecto</title>
       <link>/tags/ecto/</link>
-      <pubDate>Thu, 18 Oct 2018 20:32:00 +0000</pubDate>
+      <pubDate>Wed, 18 Nov 2020 20:38:13 -0400</pubDate>
       
       <guid>/tags/ecto/</guid>
       <description></description>
@@ -28,9 +19,36 @@
     <item>
       <title>elixir</title>
       <link>/tags/elixir/</link>
-      <pubDate>Thu, 18 Oct 2018 20:32:00 +0000</pubDate>
+      <pubDate>Wed, 18 Nov 2020 20:38:13 -0400</pubDate>
       
       <guid>/tags/elixir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fragments</title>
+      <link>/tags/fragments/</link>
+      <pubDate>Wed, 18 Nov 2020 20:38:13 -0400</pubDate>
+      
+      <guid>/tags/fragments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>order_by</title>
+      <link>/tags/order_by/</link>
+      <pubDate>Wed, 18 Nov 2020 20:38:13 -0400</pubDate>
+      
+      <guid>/tags/order_by/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>database</title>
+      <link>/tags/database/</link>
+      <pubDate>Thu, 18 Oct 2018 20:32:00 +0000</pubDate>
+      
+      <guid>/tags/database/</guid>
       <description></description>
     </item>
     
@@ -175,24 +193,6 @@
       <pubDate>Thu, 14 Sep 2017 21:56:13 -0400</pubDate>
       
       <guid>/tags/operator/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>fragments</title>
-      <link>/tags/fragments/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/fragments/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>order_by</title>
-      <link>/tags/order_by/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/order_by/</guid>
       <description></description>
     </item>
     

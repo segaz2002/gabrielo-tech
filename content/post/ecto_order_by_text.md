@@ -1,5 +1,5 @@
 +++
-categories = ["elixir", "ecto", "database"]
+categories = ["ecto"]
 comments = true
 date = "2020-11-18T20:38:13-04:00"
 draft = false

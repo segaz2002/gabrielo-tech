@@ -4,7 +4,62 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2018-10-18T20:32:00+00:00</lastmod>
+    <lastmod>2020-11-18T20:38:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/database/</loc>
+    <lastmod>2020-11-18T20:38:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/ecto/</loc>
+    <lastmod>2020-11-18T20:38:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/ecto/</loc>
+    <lastmod>2020-11-18T20:38:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/ecto-order-by-text-field/</loc>
+    <lastmod>2020-11-18T20:38:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/elixir/</loc>
+    <lastmod>2020-11-18T20:38:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/elixir/</loc>
+    <lastmod>2020-11-18T20:38:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/fragments/</loc>
+    <lastmod>2020-11-18T20:38:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/order_by/</loc>
+    <lastmod>2020-11-18T20:38:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-11-18T20:38:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-11-18T20:38:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-11-18T20:38:13-04:00</lastmod>
   </url>
   
   <url>
@@ -18,42 +73,12 @@
   </url>
   
   <url>
-    <loc>/tags/ecto/</loc>
-    <lastmod>2018-10-18T20:32:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/elixir/</loc>
-    <lastmod>2018-10-18T20:32:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/elixir/</loc>
-    <lastmod>2018-10-18T20:32:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/graphql/</loc>
     <lastmod>2018-10-18T20:32:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2018-10-18T20:32:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/query/</loc>
-    <lastmod>2018-10-18T20:32:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2018-10-18T20:32:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
     <lastmod>2018-10-18T20:32:00+00:00</lastmod>
   </url>
   
@@ -160,26 +185,6 @@
   <url>
     <loc>/tags/operator/</loc>
     <lastmod>2017-09-14T21:56:13-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/database/</loc>
-  </url>
-  
-  <url>
-    <loc>/categories/ecto/</loc>
-  </url>
-  
-  <url>
-    <loc>/post/ecto-order-by-text-field/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/fragments/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/order_by/</loc>
   </url>
   
 </urlset>

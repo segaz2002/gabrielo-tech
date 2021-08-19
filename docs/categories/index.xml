@@ -6,20 +6,11 @@
     <description>Recent content in Categories on Tech Kitchen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Oct 2018 20:32:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>elixir</title>
-      <link>/categories/elixir/</link>
-      <pubDate>Thu, 18 Oct 2018 20:32:00 +0000</pubDate>
-      
-      <guid>/categories/elixir/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Wed, 18 Nov 2020 20:38:13 -0400</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>database</title>
       <link>/categories/database/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 18 Nov 2020 20:38:13 -0400</pubDate>
       
       <guid>/categories/database/</guid>
       <description></description>
@@ -28,9 +19,18 @@
     <item>
       <title>ecto</title>
       <link>/categories/ecto/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 18 Nov 2020 20:38:13 -0400</pubDate>
       
       <guid>/categories/ecto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>elixir</title>
+      <link>/categories/elixir/</link>
+      <pubDate>Wed, 18 Nov 2020 20:38:13 -0400</pubDate>
+      
+      <guid>/categories/elixir/</guid>
       <description></description>
     </item>
     
