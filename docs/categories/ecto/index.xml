@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ecto on Tech Kitchen</title>
+    <link>/categories/ecto/</link>
+    <description>Recent content in ecto on Tech Kitchen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/categories/ecto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ecto order_by text field</title>
+      <link>/post/ecto-order-by-text-field/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ecto-order-by-text-field/</guid>
+      <description>This post demonstrates how to order an ecto query by a text field. by sending the order raw sql query through Ecto.Query.API.fragment/1
+Sample table Assuming we want to query a table containing a list of scheduled jobs with known statuses. e.g RUNNING, PENDING, COMPLETED, FAILED
+   id task_ref status last_exec_timestamp     1 2232323 PENDING 1605726253   2 2232324 FAILED 1605726153   4 2232326 RUNNING 1605726233   5 2232326 RUNNING 1605726233   6 2232326 FAILED 1605726233   7 2232326 COMPLETED 1605726233   8 2232326 FAILED 1605726233    Our objective is to:</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Order query results by text field">
+<meta name="generator" content="Hugo 0.80.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/style.css" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" type="text/css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="Tech Kitchen">
+<title>Ecto order_by text field - Tech Kitchen</title>
+</head>
+<body>
+
+<header>
+  <div class="container clearfix">
+    <a class="path" href="/">[Tech Kitchen]</a>
+    <span class="caret"># _</span>
+    <div class="right">
+      
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+
+<main role="main" class="article">
+  
+<article class="single" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="meta">
+
+
+    <span class="key">published in</span>
+    <span class="val">
+
+        <a href="/categories/elixir">elixir</a>
+
+        <a href="/categories/ecto">ecto</a>
+
+        <a href="/categories/database">database</a>
+
+    </span>
+
+
+    <br>
+    <span class="key">tags:</span>
+    <span class="val">
+
+        <a href="/tags/elixir">elixir</a>
+
+        <a href="/tags/ecto">ecto</a>
+
+        <a href="/tags/order_by">order_by</a>
+
+        <a href="/tags/fragments">fragments</a>
+
+    </span>
+
+  </div>
+  <h1 class="headline" itemprop="headline">Ecto order_by text field</h1>
+  <section class="body" itemprop="articleBody">
+    <p>This post demonstrates how to order an ecto query by a text field.
+by sending the order raw sql query through <a href="https://hexdocs.pm/ecto/Ecto.Query.API.html#fragment/1">Ecto.Query.API.fragment/1</a></p>
+<h4 id="sample-table">Sample table</h4>
+<p>Assuming we want to query a table containing a list of scheduled jobs with known statuses. e.g
+<code>RUNNING</code>, <code>PENDING</code>, <code>COMPLETED</code>, <code>FAILED</code></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>task_ref</th>
+<th>status</th>
+<th>last_exec_timestamp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2232323</td>
+<td>PENDING</td>
+<td>1605726253</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2232324</td>
+<td>FAILED</td>
+<td>1605726153</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2232326</td>
+<td>RUNNING</td>
+<td>1605726233</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2232326</td>
+<td>RUNNING</td>
+<td>1605726233</td>
+</tr>
+<tr>
+<td>6</td>
+<td>2232326</td>
+<td>FAILED</td>
+<td>1605726233</td>
+</tr>
+<tr>
+<td>7</td>
+<td>2232326</td>
+<td>COMPLETED</td>
+<td>1605726233</td>
+</tr>
+<tr>
+<td>8</td>
+<td>2232326</td>
+<td>FAILED</td>
+<td>1605726233</td>
+</tr>
+</tbody>
+</table>
+<p>Our objective is to:</p>
+<ul>
+<li>Fetch all rows</li>
+<li>Order the rows in the following order
+<code>RUNNING &gt; PENDING &gt; COMPLETED &gt; FAILED</code></li>
+</ul>
+<p>Off we go</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"> <span style="color:#75715e">#SomeModule</span>
+ import <span style="color:#66d9ef">Ecto</span><span style="color:#f92672">.</span>Query
+
+ @statuses_order <span style="color:#e6db74">&#34;&#34;&#34;
+</span><span style="color:#e6db74">    (case(?)
+</span><span style="color:#e6db74">      when &#39;RUNNING&#39; then 1
+</span><span style="color:#e6db74">      when &#39;PENDING&#39; then 2
+</span><span style="color:#e6db74">      when &#39;COMPLETED&#39; then 3
+</span><span style="color:#e6db74">      else 4
+</span><span style="color:#e6db74">    end)
+</span><span style="color:#e6db74">  &#34;&#34;&#34;</span>
+ <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">your_function</span> <span style="color:#66d9ef">do</span>
+    from(j <span style="color:#66d9ef">in</span> <span style="color:#66d9ef">Jobs</span>)
+    <span style="color:#f92672">|&gt;</span> order_by(<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span>, <span style="color:#e6db74">asc</span>: fragment(@statuses_order, j<span style="color:#f92672">.</span>status))
+    <span style="color:#f92672">|&gt;</span> <span style="color:#66d9ef">Repo</span><span style="color:#f92672">.</span>all()
+ <span style="color:#66d9ef">end</span>
+
+</code></pre></div><p>Just like that, our jobs records will be returned in the order which we have specified in the <code>@statuses_order</code> module attribute string.</p>
+<p>Read more here <a href="https://elixirforum.com/t/error-interpolating-a-variable-as-the-first-argument-of-an-ecto-fragment/6711/2">here</a>.</p>
+
+  </section>
+</article>
+
+</main>
+
+</div>
+
+<footer>
+  <div class="container">
+    <span class="copyright">&copy; 2018 Tech Kitchen - <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
+

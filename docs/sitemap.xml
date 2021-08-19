@@ -162,4 +162,24 @@
     <lastmod>2017-09-14T21:56:13-04:00</lastmod>
   </url>
   
+  <url>
+    <loc>/categories/database/</loc>
+  </url>
+  
+  <url>
+    <loc>/categories/ecto/</loc>
+  </url>
+  
+  <url>
+    <loc>/post/ecto-order-by-text-field/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/fragments/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/order_by/</loc>
+  </url>
+  
 </urlset>

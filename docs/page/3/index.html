@@ -64,6 +64,19 @@ The first time I came across the syntax below, I wondered what the f**k is happe
 </article>
 
     
+      <article class="list-item" itemscope itemtype="http://schema.org/Blog">
+  <h2 class="headline" itemprop="headline"><a href="/post/ecto-order-by-text-field/">Ecto order_by text field</a></h2>
+  <div class="meta">
+
+  </div>
+  <section class="summary">
+    This post demonstrates how to order an ecto query by a text field. by sending the order raw sql query through Ecto.Query.API.fragment/1
+Sample table Assuming we want to query a table containing a list of scheduled jobs with known statuses. e.g RUNNING, PENDING, COMPLETED, FAILED
+   id task_ref status last_exec_timestamp     1 2232323 PENDING 1605726253   2 2232324 FAILED 1605726153   4 2232326 RUNNING 1605726233   5 2232326 RUNNING 1605726233   6 2232326 FAILED 1605726233   7 2232326 COMPLETED 1605726233   8 2232326 FAILED 1605726233    Our objective is to:  <a href="/post/ecto-order-by-text-field/">Read More...</a>
+  </section>
+</article>
+
+    
   </div>
 
   
@@ -88,8 +101,18 @@ The first time I came across the syntax below, I wondered what the f**k is happe
   <section class="categories">
     
     <h2 class="category">
+      <a href="/categories/database">Database</a>
+      <small>(1)</small>
+    </h2>
+    
+    <h2 class="category">
+      <a href="/categories/ecto">Ecto</a>
+      <small>(1)</small>
+    </h2>
+    
+    <h2 class="category">
       <a href="/categories/elixir">Elixir</a>
-      <small>(7)</small>
+      <small>(8)</small>
     </h2>
     
   </section>
@@ -134,12 +157,17 @@ The first time I came across the syntax below, I wondered what the f**k is happe
     
     <span class="tag">
       <a href="/tags/ecto">ecto</a>
-      <small>(1)</small>
+      <small>(2)</small>
     </span>
     
     <span class="tag">
       <a href="/tags/elixir">elixir</a>
-      <small>(7)</small>
+      <small>(8)</small>
+    </span>
+    
+    <span class="tag">
+      <a href="/tags/fragments">fragments</a>
+      <small>(1)</small>
     </span>
     
     <span class="tag">
@@ -164,6 +192,11 @@ The first time I came across the syntax below, I wondered what the f**k is happe
     
     <span class="tag">
       <a href="/tags/operator">operator</a>
+      <small>(1)</small>
+    </span>
+    
+    <span class="tag">
+      <a href="/tags/order_by">order_by</a>
       <small>(1)</small>
     </span>
     
