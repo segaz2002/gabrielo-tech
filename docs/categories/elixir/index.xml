@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>elixir on Tech Kitchen</title>
+    <title>elixir on Gabriel Kolawole</title>
     <link>/categories/elixir/</link>
-    <description>Recent content in elixir on Tech Kitchen</description>
+    <description>Recent content in elixir on Gabriel Kolawole</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 18 Oct 2018 20:32:00 +0000</lastBuildDate><atom:link href="/categories/elixir/index.xml" rel="self" type="application/rss+xml" />

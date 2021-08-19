@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>/</loc>
+    <lastmod>2020-11-18T20:38:13-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/order_by/</loc>
     <lastmod>2020-11-18T20:38:13-04:00</lastmod>
   </url>
@@ -44,11 +49,6 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-11-18T20:38:13-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
     <lastmod>2020-11-18T20:38:13-04:00</lastmod>
   </url>
   
