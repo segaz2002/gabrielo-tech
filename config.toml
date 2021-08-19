@@ -3,7 +3,7 @@ baseurl = "/"
 #themesDir = "../.."
 publishDir = "docs"
 languageCode = "en-us"
-title = "Tech Kitchen"
+title = "Gabriel Kolawole"
 theme = "base16"
 
 # Enter your tracking code to enable Google Analytics

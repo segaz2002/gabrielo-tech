@@ -29,23 +29,6 @@
   <h1 class="list-title">elixir</h1>
   
     <article class="list-item" itemscope itemtype="http://schema.org/Blog">
-  <h2 class="headline" itemprop="headline"><a href="/post/elixir-telegram-bot/">Elixir Telegram Bot</a></h2>
-  <div class="meta">
-
-    <span class="key">published on</span>
-    <span class="val"><time itemprop="datePublished" datetime="2017-12-27">December 27, 2017</time></span>
-
-  </div>
-  <section class="summary">
-    The quest was to develop a telegram bot over 24hrs, during an office hackathon event.
-I started out consulting documentation.
-Bot interaction was implemented as a GenServer named ConversationTree
-defmodule TelegramService.ConversationTree do use GenServer def start_link(name, conversation \\ %{message: [], response: [], tickets: []}) do {:ok, _} = GenServer.start_link(__MODULE__, conversation, name: name) name end def lookup(name) do GenServer.whereis(name) end def kill(name) do GenServer.stop(name) end def write_message(name, message = %{}) do GenServer.  <a href="/post/elixir-telegram-bot/">Read More...</a>
-  </section>
-</article>
-
-  
-    <article class="list-item" itemscope itemtype="http://schema.org/Blog">
   <h2 class="headline" itemprop="headline"><a href="/post/elixir-controller-testing/">Testing a phoenix controller</a></h2>
   <div class="meta">
 
@@ -73,6 +56,22 @@ defmodule PaymentServiceWeb.Controllers.PaymentTest do use ExUnit.Case, async: f
 I have personally used the rsa_ex library which made the list in one of my projects.
 This can come handy in your next project.
 Share. 
+  </section>
+</article>
+
+  
+    <article class="list-item" itemscope itemtype="http://schema.org/Blog">
+  <h2 class="headline" itemprop="headline"><a href="/post/elixir-recursion/">Recursion in elixir</a></h2>
+  <div class="meta">
+
+    <span class="key">published on</span>
+    <span class="val"><time itemprop="datePublished" datetime="2017-09-21">September 21, 2017</time></span>
+
+  </div>
+  <section class="summary">
+    I am new to elixir, and I find this interesting at the time of writing, I am coming from NodeJs :)
+The major ingredients of recursion are:
+ An exercise to perform repeatedly, A condition to break off the repeated exercise  Lets say we want to write a function that will return building identifiers where restaurants have not yet closed. The first argument is the current hour as integer, the second argument is the current minute as integer, the third argument is the list of restaurants containing; the name of the canteen, building identifier, closing hour, closing minute.  <a href="/post/elixir-recursion/">Read More...</a>
   </section>
 </article>
 

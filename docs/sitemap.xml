@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>/categories/database/</loc>
-    <lastmod>2020-11-18T20:38:13-04:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/ecto/</loc>
     <lastmod>2020-11-18T20:38:13-04:00</lastmod>
   </url>
@@ -29,11 +24,6 @@
   
   <url>
     <loc>/tags/elixir/</loc>
-    <lastmod>2020-11-18T20:38:13-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/elixir/</loc>
     <lastmod>2020-11-18T20:38:13-04:00</lastmod>
   </url>
   
@@ -69,6 +59,11 @@
   
   <url>
     <loc>/tags/database/</loc>
+    <lastmod>2018-10-18T20:32:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/elixir/</loc>
     <lastmod>2018-10-18T20:32:00+00:00</lastmod>
   </url>
   

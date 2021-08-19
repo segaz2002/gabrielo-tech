@@ -29,22 +29,6 @@
   <h1 class="list-title">elixir</h1>
   
     <article class="list-item" itemscope itemtype="http://schema.org/Blog">
-  <h2 class="headline" itemprop="headline"><a href="/post/ecto-order-by-text-field/">Ecto order_by text field</a></h2>
-  <div class="meta">
-
-    <span class="key">published on</span>
-    <span class="val"><time itemprop="datePublished" datetime="2020-11-18">November 18, 2020</time></span>
-
-  </div>
-  <section class="summary">
-    This post demonstrates how to order an ecto query by a text field. by sending the order raw sql query through Ecto.Query.API.fragment/1
-Sample table Assuming we want to query a table containing a list of scheduled jobs with known statuses. e.g RUNNING, PENDING, COMPLETED, FAILED
-   id task_ref status last_exec_timestamp     1 2232323 PENDING 1605726253   2 2232324 FAILED 1605726153   4 2232326 RUNNING 1605726233   5 2232326 RUNNING 1605726233   6 2232326 FAILED 1605726233   7 2232326 COMPLETED 1605726233   8 2232326 FAILED 1605726233    Our objective is to:  <a href="/post/ecto-order-by-text-field/">Read More...</a>
-  </section>
-</article>
-
-  
-    <article class="list-item" itemscope itemtype="http://schema.org/Blog">
   <h2 class="headline" itemprop="headline"><a href="/post/elixir-dynamic-queries-with-ecto/">Composing dynamic queries with ecto</a></h2>
   <div class="meta">
 
@@ -71,6 +55,23 @@ Sample table Assuming we want to query a table containing a list of scheduled jo
     The situation was that, I needed to mock multiple external service within my application in order to test my application.
 These external services are being consumed using HTTPPoison the popular elixir http client. The mock is achieved using the Mock library
 # ~/multi_mocks.exs Import Mock #Mock multiple functions of the same module test &#34;Test special service that will call other supporting endpoints&#34; do with_mock( HTTPoison, post!: fn endpoint_a, _, _ -&gt; %HTTPoison.  <a href="/post/elixir-tests-with-mocks/">Read More...</a>
+  </section>
+</article>
+
+  
+    <article class="list-item" itemscope itemtype="http://schema.org/Blog">
+  <h2 class="headline" itemprop="headline"><a href="/post/elixir-telegram-bot/">Elixir Telegram Bot</a></h2>
+  <div class="meta">
+
+    <span class="key">published on</span>
+    <span class="val"><time itemprop="datePublished" datetime="2017-12-27">December 27, 2017</time></span>
+
+  </div>
+  <section class="summary">
+    The quest was to develop a telegram bot over 24hrs, during an office hackathon event.
+I started out consulting documentation.
+Bot interaction was implemented as a GenServer named ConversationTree
+defmodule TelegramService.ConversationTree do use GenServer def start_link(name, conversation \\ %{message: [], response: [], tickets: []}) do {:ok, _} = GenServer.start_link(__MODULE__, conversation, name: name) name end def lookup(name) do GenServer.whereis(name) end def kill(name) do GenServer.stop(name) end def write_message(name, message = %{}) do GenServer.  <a href="/post/elixir-telegram-bot/">Read More...</a>
   </section>
 </article>
 
